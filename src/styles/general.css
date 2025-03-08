@@ -2,6 +2,10 @@
     color: #822e27;
 }
 
+.background {
+    background-color: #822e27;
+}
+
 .border-bottom-left-rounded {
     border-bottom-left-radius: 64px;
 }
