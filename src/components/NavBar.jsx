@@ -13,7 +13,7 @@ const NavBar = () => {
         {/*Mobile Menu Button -only visible on mobiles*/}
         <div className="flex md:hidden justify-between">
           <button onClick={toggleMenu}>
-            <img src={hamMenu} alt="hamburger menu" />
+            <img src={hamMenu} alt="hamburger menu" className="h-8"/>
           </button>
           <div className="md:order-2 md:px-16">
             <img src={AKH_Logo} alt="AKH Realty Logo" className="h-8 md:h-12"/>
@@ -21,8 +21,6 @@ const NavBar = () => {
         </div>
 
         {/* Logo */}
-        
-        <div className="block md:hidden w-8"></div>
 
         {/*Desktop Menu - hidden on mobile */}
         <div className="hidden md:flex md:order-1 md:justify-end md:space-x-8 text-white font-medium">
