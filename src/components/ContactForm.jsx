@@ -59,7 +59,7 @@ const ContactForm = () => {
   };
 
   return (
-    <div className="flex flex-col md:flex-row w-full mx-auto p-24 background">
+    <div className="flex flex-col md:flex-row w-full mx-auto lg:p-24 p-8 background">
       {/* Left section */}
       <div className="md:w-1/2 mb-8 md:mb-0 flex items-center">
         <h1 className="text-4xl md:text-5xl font-medium text-white leading-tight">
@@ -70,7 +70,7 @@ const ContactForm = () => {
       {/* Right section */}
       <div className="md:w-1/2 md:pl-10">
         <div className="mb-6">
-          <h2 className="text-3xl font-medium text-white mb-6">
+          <h2 className="text-2xl md:text-3xl font-medium text-white mb-6">
             Feel Free to send us a message
           </h2>
         </div>

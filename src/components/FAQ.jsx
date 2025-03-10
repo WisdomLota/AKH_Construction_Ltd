@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 const FAQ = () => {
   const [selectedQuestion, setSelectedQuestion] = useState(1);
   const [expandedMobile, setExpandedMobile] = useState(1);
+  const [isTransitioning, setIsTransitioning] = useState(false);
 
   // FAQ data with questions and answers
   const faqData = [
@@ -29,7 +30,13 @@ const FAQ = () => {
   ];
 
   const handleQuestionClick = (id) => {
-    setSelectedQuestion(id);
+    if (selectedQuestion !== id) {
+      setIsTransitioning(true);
+      setTimeout(() => {
+        setSelectedQuestion(id);
+        setIsTransitioning(false);
+      }, 300); // Half of the transition time to change content at the midpoint
+    }
     
     // For mobile, toggle the expanded state when clicking the same question
     setExpandedMobile(expandedMobile === id ? null : id);
@@ -93,7 +100,7 @@ const FAQ = () => {
             ))}
           </div>
 
-          <div className="w-1/2 md:p-16 p-2">
+          <div className="w-1/2 md:p-16 p-2 animate-bounce">
             <div className="bg-white rounded-lg shadow-xl p-6 md:ml-4">
               {faqData.find(faq => faq.id === selectedQuestion)?.answer}
             </div>

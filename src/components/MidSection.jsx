@@ -117,7 +117,7 @@ const MidSection = () => {
       </section>
 
       {/* Become a Home Owner Section */}
-      <section className="w-full bg-[#8B2A23] text-white py-16">
+      <section className="w-full bg-[#822e27] text-white py-16">
         <div className="container mx-auto flex flex-col md:flex-row items-center">
           <div className="md:w-1/2 mb-8 md:mb-0 lg:p-28 md:p-12 p-8">
             <h2 className="text-4xl lg:text-5xl font-semibold mb-4">BECOME A HOME OWNER TODAY</h2>

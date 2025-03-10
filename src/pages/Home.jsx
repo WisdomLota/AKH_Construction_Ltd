@@ -6,6 +6,7 @@ import Features from "../components/Features.jsx";
 import MidSection from "../components/MidSection.jsx";
 import FAQ from "../components/FAQ.jsx";
 import ContactForm from "../components/ContactForm.jsx";
+import FooterBox from "../components/FooterBox.jsx";
 import explorePic from "../assets/explorePic.png";
 import "../styles/general.css";
 
@@ -35,8 +36,11 @@ const Home = () => {
       {/* Interactive FAQ section */}
       <FAQ/>
 
-      {/* Interactive FAQ section */}
+      {/* Contact Form for more questions */}
       <ContactForm/>
+
+      {/* Footer */}
+      <FooterBox/>
       
     </div>
     )
