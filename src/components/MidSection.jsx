@@ -29,7 +29,7 @@ const MidSection = () => {
               without any hassle.
             </p>
             <div className="hidden md:inline-flex items-center pb-2 group cursor-pointer">
-              <span className="mr-4 font-medium border-b-2 border-white w-28">EXPLORE VR</span>
+              <span className="mr-4 font-medium border-b-2 border-white w-28 pb-1">EXPLORE VR</span>
               <div className="w-8 h-8 rounded-full bg-white flex items-center justify-center">
                 <img src={directArrow} alt="arrow-direction" className="w-4 h-4"/>
               </div>
@@ -47,7 +47,7 @@ const MidSection = () => {
         </div>
         {/*Mobile view only */}
         <div className="md:hidden flex justify-end items-center px-8 py-2 group cursor-pointer mt-2">
-            <span className="mr-4 font-medium border-b-2 border-white w-28">EXPLORE VR</span>
+            <span className="mr-4 font-medium border-b-2 border-white w-28 pb-1">EXPLORE VR</span>
             <div className="w-8 h-8 rounded-full bg-white flex items-center justify-center">
               <img src={directArrow} alt="arrow-direction" className="w-4 h-4"/>
             </div>
@@ -66,7 +66,7 @@ const MidSection = () => {
                 after units are selling fast, and you won't want to miss out.
               </p>
               <div className="hidden md:inline-flex items-center pb-2 group cursor-pointer text-[#6ca2e3]">
-                <span className="mr-4 font-medium border-b-2 border-[#6ca2e3] w-28">EXPLORE VR</span>
+                <span className="mr-4 font-medium border-b-2 border-[#6ca2e3] w-28 pb-1">EXPLORE VR</span>
                 <div className="w-8 h-8 rounded-full bg-white flex items-center justify-center">
                     <img src={blueDirectArrow} alt="arrow-direction" className="w-full"/>
                 </div>
@@ -109,7 +109,7 @@ const MidSection = () => {
         </div>
         {/*Mobile view only */}
         <div className="flex md:hidden justify-end items-center px-8 py-2 mt-2 group cursor-pointer text-[#6ca2e3]">
-          <span className="mr-4 font-medium border-b-2 border-[#6ca2e3] w-28">EXPLORE VR</span>
+          <span className="mr-4 font-medium border-b-2 border-[#6ca2e3] w-28 pb-1">EXPLORE VR</span>
           <div className="w-8 h-8 rounded-full bg-white flex items-center justify-center">
               <img src={blueDirectArrow} alt="arrow-direction" className="w-full"/>
           </div>
@@ -119,7 +119,7 @@ const MidSection = () => {
       {/* Become a Home Owner Section */}
       <section className="w-full bg-[#8B2A23] text-white py-16">
         <div className="container mx-auto flex flex-col md:flex-row items-center">
-          <div className="md:w-1/2 mb-8 md:mb-0 md:pr-8 lg:p-28 p-12">
+          <div className="md:w-1/2 mb-8 md:mb-0 lg:p-28 md:p-12 p-8">
             <h2 className="text-4xl lg:text-5xl font-semibold mb-4">BECOME A HOME OWNER TODAY</h2>
             <p className="mb-8">
               Own your dream home with AKH Realty today! Our modernized 
@@ -128,18 +128,25 @@ const MidSection = () => {
               never been easier. Don't miss out—become a homeowner today!
             </p>
             <div className="hidden md:inline-flex items-center pb-2 group cursor-pointer">
-              <span className="mr-4 font-medium border-b-2 border-white w-28">EXPLORE VR</span>
+              <span className="mr-4 font-medium border-b-2 border-white w-28 pb-1">EXPLORE VR</span>
               <div className="w-8 h-8 rounded-full bg-white flex items-center justify-center">
                 <img src={directArrow} alt="arrow-direction" className="w-4 h-4"/>
               </div>
             </div>
           </div>
-          <div className="md:w-1/2">
+          <div className="md:w-1/2 pl-2">
             <img 
               src={homeOwner}
               alt="Real estate agent with new homeowners" 
               className="w-full h-auto object-cover"
             />
+          </div>
+        </div>
+        {/*Mobile view only */}
+        <div className="md:hidden flex justify-end items-center px-8 py-2 group cursor-pointer mt-2">
+          <span className="mr-4 font-medium border-b-2 border-white w-28 pb-1">EXPLORE VR</span>
+          <div className="w-8 h-8 rounded-full bg-white flex items-center justify-center">
+            <img src={directArrow} alt="arrow-direction" className="w-4 h-4"/>
           </div>
         </div>
       </section>

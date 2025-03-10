@@ -119,7 +119,7 @@ const SignUp = () => {
               disabled={isSubmitting}
               className="text-[#6ca2e3] flex group items-center justify-center cursor-pointer"
             >
-                <span className="mr-4 font-medium border-b-2 border-[#6ca2e3]">SIGN UP</span>
+                <span className="mr-4 font-medium border-b-2 border-[#6ca2e3] pb-1">SIGN UP</span>
                 <div className="w-8 h-8 rounded-full bg-white flex items-center justify-center">
                   <img src={blueDirectArrow} alt="arrow-direction" className="w-full"/>
                 </div>
