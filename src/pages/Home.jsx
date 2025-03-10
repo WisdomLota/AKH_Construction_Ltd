@@ -3,6 +3,7 @@ import Hero from "../components/Hero.jsx";
 import About from "../components/About.jsx";
 import SignUp from "../components/SignUp.jsx";
 import Features from "../components/Features.jsx";
+import MidSection from "../components/MidSection.jsx";
 import explorePic from "../assets/explorePic.png";
 import "../styles/general.css";
 
@@ -25,6 +26,9 @@ const Home = () => {
 
       {/* SignUp Section */}
       <SignUp/>
+
+      {/* Virtual Realty, Trending Realty and Become Home Owner Section */}
+      <MidSection/>
       
     </div>
     )

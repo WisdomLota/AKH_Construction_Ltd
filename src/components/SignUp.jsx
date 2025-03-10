@@ -62,7 +62,7 @@ const SignUp = () => {
   return (
     <div className="flex flex-col md:flex-row mx-auto overflow-hidden">
       {/* Left section*/}
-      <div className="bg-white p-12 md:p-24 md:w-1/2 flex flex-col justify-center">
+      <div className="bg-white p-12 lg:p-24 md:w-1/2 flex flex-col justify-center">
         <h1 className="text-4xl md:text-6xl font-semibold mb-6 text">SIGN UP</h1>
         <p className="text mb-2 font-medium">
           Be the first to know about new homes with AKHCON Realty! Sign
@@ -73,7 +73,7 @@ const SignUp = () => {
       </div>
       
       {/* Right section - Form */}
-      <div className="bg-white p-12 md:p-24 md:w-1/2 flex flex-col justify-center">
+      <div className="bg-white p-12 lg:p-24 md:w-1/2 flex flex-col justify-center">
         <h2 className="text-2xl md:text-3xl font-semibold mb-6 text">Let's Find your dream home together</h2>
         
         <form onSubmit={handleSubmit} className="flex flex-col space-y-4">
@@ -117,7 +117,7 @@ const SignUp = () => {
             <button
               type="submit"
               disabled={isSubmitting}
-              className="text-[#6ca2e3] flex items-center justify-center cursor-pointer"
+              className="text-[#6ca2e3] flex group items-center justify-center cursor-pointer"
             >
                 <span className="mr-4 font-medium border-b-2 border-[#6ca2e3]">SIGN UP</span>
                 <div className="w-8 h-8 rounded-full bg-white flex items-center justify-center">

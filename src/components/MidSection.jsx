@@ -1,0 +1,150 @@
+import React from 'react';
+import virtualTourImg from '../assets/virtualTourImg.png';
+import directArrow from '../assets/directArrow.svg';
+import blueDirectArrow from '../assets/blueDirectArrow.svg';
+import trendingRealtyImg1 from '../assets/trendingRealtyImg1.png';
+import trendingRealtyImg2 from '../assets/trendingRealtyImg2.png';
+import trendingRealtyImg3 from '../assets/trendingRealtyImg3.png';
+import trendingRealtyImg4 from '../assets/trendingRealtyImg4.png';
+import trendingRealtyImg5 from '../assets/trendingRealtyImg5.png';
+import homeOwner from '../assets/homeOwner.png';
+
+const MidSection = () => {
+  return (
+    <div className="w-full">
+      {/* Virtual Reality Tour Section */}
+      <section className="w-full background text-white py-12">
+        <div className="container mx-auto px-4 md:px-8 lg:px-16 flex flex-col md:flex-row items-center">
+          <div className="md:w-1/2 mb-4 md:mb-0 p-8">
+            <h2 className="text-4xl lg:text-5xl font-semibold mb-4">VIRTUAL REALITY TOUR</h2>
+            <p className="mb-4">
+              Step into the future of home buying with AKHI Realty! 
+              Experience our cutting-edge VR technology and explore 
+              stunning, modernized homes from the comfort of your own 
+              space.
+            </p>
+            <p className="mb-8">
+              Our VR tours allow you to virtually walk through potential homes, 
+              giving you a feel for the beauty and aesthetics we proudly offer—
+              without any hassle.
+            </p>
+            <div className="hidden md:inline-flex items-center pb-2 group cursor-pointer">
+              <span className="mr-4 font-medium border-b-2 border-white w-28">EXPLORE VR</span>
+              <div className="w-8 h-8 rounded-full bg-white flex items-center justify-center">
+                <img src={directArrow} alt="arrow-direction" className="w-4 h-4"/>
+              </div>
+            </div>
+          </div>
+          <div className="md:w-1/2 p-4">
+            <div className="relative border-t-8 border-r-8 border-white ">
+              <img 
+                src={virtualTourImg}
+                alt="Modern home virtual tour" 
+                className="w-full h-auto object-cover rounded-md relative z-10"
+              />
+            </div>
+          </div>  
+        </div>
+        {/*Mobile view only */}
+        <div className="md:hidden flex justify-end items-center px-8 py-2 group cursor-pointer mt-2">
+            <span className="mr-4 font-medium border-b-2 border-white w-28">EXPLORE VR</span>
+            <div className="w-8 h-8 rounded-full bg-white flex items-center justify-center">
+              <img src={directArrow} alt="arrow-direction" className="w-4 h-4"/>
+            </div>
+        </div>
+      </section>
+
+      {/* Trending Realty Section */}
+      <section className="w-full bg-white py-16">
+        <div className="container mx-auto px-4 md:px-8 lg:px-16 text">
+          <div className="flex flex-col md:flex-row items-center">
+            <div className="md:w-1/2 mb-4 md:mb-0 lg:p-12 p-4">
+              <h2 className="text-4xl lg:text-6xl font-semibold mb-4">TRENDING REALTY</h2>
+              <p className="mb-4">
+                Our latest collection of modernized homes boasts stunning 
+                aesthetics and unparalleled convenience. These highly sought-
+                after units are selling fast, and you won't want to miss out.
+              </p>
+              <div className="hidden md:inline-flex items-center pb-2 group cursor-pointer text-[#6ca2e3]">
+                <span className="mr-4 font-medium border-b-2 border-[#6ca2e3] w-28">EXPLORE VR</span>
+                <div className="w-8 h-8 rounded-full bg-white flex items-center justify-center">
+                    <img src={blueDirectArrow} alt="arrow-direction" className="w-full"/>
+                </div>
+              </div>
+            </div>
+            <div className="md:w-1/2 lg:p-12 p-4">
+              <div className="space-y-4">
+                <div>
+                  <img 
+                    src={trendingRealtyImg1}
+                    alt="Trending property" 
+                    className="w-full h-auto object-cover"
+                  />
+                </div>
+                <div className="grid grid-cols-4 gap-2">
+                  <img 
+                    src={trendingRealtyImg2}
+                    alt="Property detail 1" 
+                    className="w-full h-auto object-cover"
+                  />
+                  <img 
+                    src={trendingRealtyImg3}
+                    alt="Property detail 2" 
+                    className="w-full h-auto object-cover"
+                  />
+                  <img 
+                    src={trendingRealtyImg4}
+                    alt="Property detail 3" 
+                    className="w-full h-auto object-cover"
+                  />
+                  <img 
+                    src={trendingRealtyImg5}
+                    alt="Property detail 4" 
+                    className="w-full h-auto object-cover"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        {/*Mobile view only */}
+        <div className="flex md:hidden justify-end items-center px-8 py-2 mt-2 group cursor-pointer text-[#6ca2e3]">
+          <span className="mr-4 font-medium border-b-2 border-[#6ca2e3] w-28">EXPLORE VR</span>
+          <div className="w-8 h-8 rounded-full bg-white flex items-center justify-center">
+              <img src={blueDirectArrow} alt="arrow-direction" className="w-full"/>
+          </div>
+        </div>
+      </section>
+
+      {/* Become a Home Owner Section */}
+      <section className="w-full bg-[#8B2A23] text-white py-16">
+        <div className="container mx-auto flex flex-col md:flex-row items-center">
+          <div className="md:w-1/2 mb-8 md:mb-0 md:pr-8 lg:p-28 p-12">
+            <h2 className="text-4xl lg:text-5xl font-semibold mb-4">BECOME A HOME OWNER TODAY</h2>
+            <p className="mb-8">
+              Own your dream home with AKH Realty today! Our modernized 
+              homes are designed to match your style and enhance your 
+              lifestyle. With a seamless online process, owning a home has 
+              never been easier. Don't miss out—become a homeowner today!
+            </p>
+            <div className="hidden md:inline-flex items-center pb-2 group cursor-pointer">
+              <span className="mr-4 font-medium border-b-2 border-white w-28">EXPLORE VR</span>
+              <div className="w-8 h-8 rounded-full bg-white flex items-center justify-center">
+                <img src={directArrow} alt="arrow-direction" className="w-4 h-4"/>
+              </div>
+            </div>
+          </div>
+          <div className="md:w-1/2">
+            <img 
+              src={homeOwner}
+              alt="Real estate agent with new homeowners" 
+              className="w-full h-auto object-cover"
+            />
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+};
+
+export default MidSection;
