@@ -13,7 +13,7 @@ const TermsOfUse = () => {
 
         <div className="bg-white min-h-screen p-8 md:p-12 lg:p-24 text-[#822e27]">
           <div className="mx-auto mt-20 md:mt-12">
-            <h1 className="text-4xl md:text-4xl font-bold text-[#822e27] mb-6">Terms Of Use</h1>
+            <h1 className="text-4xl font-bold text-[#822e27] mb-6">Terms Of Use</h1>
 
             <div className=" space-y-6">
               <p className="text-sm">
