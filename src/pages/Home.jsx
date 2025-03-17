@@ -15,7 +15,7 @@ const Home = () => {
     <div className="min-h-screen flex flex-col">
       <div style={{backgroundImage: `url(${explorePic})`, backgroundSize: "cover", backgroundPosition: "center"}} className="h-fit border-bottom-left-rounded">
         {/* Navigation */}
-        <NavBar/>
+        <NavBar textColor="text-white" borderColor="border-white"/>
 
         {/* Hero Section */}
         <Hero/>

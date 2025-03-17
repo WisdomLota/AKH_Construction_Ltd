@@ -1,7 +1,12 @@
 import React from 'react';
-import footerLogoAKH from '../assets/footerLogoAKH.png';
+import defaultLogo from '../assets/footerLogoAKH.png';
 
-const FooterBox = ({ mainBgColor = 'bg-white', footerBgColor = 'bg-[#822e27]', mainTextColor = 'text-[#822e27]', footerTextColor = 'text-white' }) => {
+const FooterBox = ({ 
+  mainBgColor = 'bg-white',
+  footerBgColor = 'bg-[#822e27]', 
+  mainTextColor = 'text-[#822e27]', 
+  footerTextColor = 'text-white',
+  logo = defaultLogo }) => {
   const currentYear = new Date().getFullYear();
   
   return (
@@ -10,7 +15,7 @@ const FooterBox = ({ mainBgColor = 'bg-white', footerBgColor = 'bg-[#822e27]', m
         <div className="flex flex-col md:flex-row justify-between items-start space-x-8">
           {/* Logo and tagline */}
           <div className="mb-8">
-            <img src={footerLogoAKH} alt="AKH Realty Logo" className="h-16 md:h-20"/>
+            <img src={logo} alt="AKH Realty Logo" className="h-16 md:h-20"/>
             <p className="mt-3 max-w-xs font-semibold">
               An estate full of modernized homes with beautiful aesthetics.
             </p>
