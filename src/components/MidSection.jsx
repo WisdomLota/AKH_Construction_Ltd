@@ -31,7 +31,7 @@ const MidSection = () => {
             <div className="hidden md:inline-flex items-center pb-2 group cursor-pointer">
               <span className="mr-4 font-medium border-b-2 border-white w-28 pb-1">EXPLORE VR</span>
               <div className="w-8 h-8 rounded-full bg-white flex items-center justify-center">
-                <img src={directArrow} alt="arrow-direction" className="w-4 h-4"/>
+                <img src={directArrow} alt="arrow-direction" className="w-full"/>
               </div>
             </div>
           </div>
@@ -49,7 +49,7 @@ const MidSection = () => {
         <div className="md:hidden flex justify-end items-center px-8 py-2 group cursor-pointer mt-2">
             <span className="mr-4 font-medium border-b-2 border-white w-28 pb-1">EXPLORE VR</span>
             <div className="w-8 h-8 rounded-full bg-white flex items-center justify-center">
-              <img src={directArrow} alt="arrow-direction" className="w-4 h-4"/>
+              <img src={directArrow} alt="arrow-direction" className="w-full"/>
             </div>
         </div>
       </section>
@@ -130,7 +130,7 @@ const MidSection = () => {
             <div className="hidden md:inline-flex items-center pb-2 group cursor-pointer">
               <span className="mr-4 font-medium border-b-2 border-white w-28 pb-1">EXPLORE VR</span>
               <div className="w-8 h-8 rounded-full bg-white flex items-center justify-center">
-                <img src={directArrow} alt="arrow-direction" className="w-4 h-4"/>
+                <img src={directArrow} alt="arrow-direction" className="w-full"/>
               </div>
             </div>
           </div>
@@ -146,7 +146,7 @@ const MidSection = () => {
         <div className="md:hidden flex justify-end items-center px-8 py-2 group cursor-pointer mt-2">
           <span className="mr-4 font-medium border-b-2 border-white w-28 pb-1">EXPLORE VR</span>
           <div className="w-8 h-8 rounded-full bg-white flex items-center justify-center">
-            <img src={directArrow} alt="arrow-direction" className="w-4 h-4"/>
+            <img src={directArrow} alt="arrow-direction" className="w-full"/>
           </div>
         </div>
       </section>

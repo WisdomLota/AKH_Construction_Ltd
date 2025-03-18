@@ -1,7 +1,14 @@
 import React, { useState } from 'react';
-import directArrow from '../assets/directArrow.svg';
+import defaultArrow from '../assets/blueDirectArrow.svg';
+// import customArrow from '../assets/blueDirectArrow.svg';
 
-const ContactForm = () => {
+const ContactForm = ({
+  bgColor = 'bg-white', 
+  textColor = 'text-[#822e27]', 
+  bordersColor = 'border-[#822e27]',
+  arrow = defaultArrow,
+  btnLine = 'border-[#6ca2e3]',
+  btnText = 'text-[#6ca2e3]'}) => {
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
   const [emailError, setEmailError] = useState('');
@@ -59,10 +66,10 @@ const ContactForm = () => {
   };
 
   return (
-    <div className="flex flex-col md:flex-row w-full mx-auto lg:p-24 p-8 background">
+    <div className={`flex flex-col md:flex-row w-full mx-auto lg:p-24 p-8 ${bgColor} ${textColor}`}>
       {/* Left section */}
       <div className="md:w-1/2 mb-8 md:mb-0 flex items-center">
-        <h1 className="text-4xl md:text-5xl font-medium text-white leading-tight">
+        <h1 className="text-4xl md:text-5xl font-medium leading-tight">
           STILL HAVE MORE QUESTIONS FOR US?
         </h1>
       </div>
@@ -70,7 +77,7 @@ const ContactForm = () => {
       {/* Right section */}
       <div className="md:w-1/2 md:pl-10">
         <div className="mb-6">
-          <h2 className="text-2xl md:text-3xl font-medium text-white mb-6">
+          <h2 className="text-2xl md:text-3xl font-medium mb-6">
             Feel Free to send us a message
           </h2>
         </div>
@@ -82,7 +89,7 @@ const ContactForm = () => {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               placeholder="Email Address"
-              className={`w-full p-4 border rounded-bl-4xl text-white placeholder-red-300 border-white focus:outline-none ${emailError ? 'border-red-300' : ''}`}
+              className={`w-full p-4 border rounded-bl-4xl ${bordersColor} focus:outline-none ${emailError ? 'border-red-300' : ''}`}
             />
             {emailError && <p className="mt-1 text-red-500 text-sm">{emailError}</p>}
           </div>
@@ -93,18 +100,18 @@ const ContactForm = () => {
               onChange={(e) => setMessage(e.target.value)}
               placeholder="Message"
               rows={6}
-              className={`w-full p-4 border rounded-bl-4xl text-white placeholder-red-300 border-white focus:outline-none ${messageError ? 'border-red-300' : ''}`}
+              className={`w-full p-4 border rounded-bl-4xl ${bordersColor} focus:outline-none ${messageError ? 'border-red-300' : ''}`}
             />
             {messageError && <p className="mt-1 text-red-500 text-sm">{messageError}</p>}
           </div>
 
             {/* Submit button */}
-            <div className="flex justify-end items-center pb-2 group cursor-pointer text-white"
+            <div className="flex justify-end items-center pb-2 group cursor-pointer"
             onClick={handleSubmit}
             disabled={isSubmitting}>
-                <span className="mr-4 font-medium border-b-2 border-white w-14 pb-1">SEND</span>
+                <span className={`mr-4 font-medium border-b-2 w-14 pb-1 ${btnLine} ${btnText}`}>SEND</span>
                 <div className="w-8 h-8 rounded-full bg-white flex items-center justify-center">
-                  <img src={directArrow} alt="arrow-direction" className="w-4 h-4"/>
+                  <img src={arrow} alt="arrow-direction" />
                 </div>
             </div>
           

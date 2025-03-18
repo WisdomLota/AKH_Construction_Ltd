@@ -8,6 +8,7 @@ import FAQ from "../components/FAQ.jsx";
 import ContactForm from "../components/ContactForm.jsx";
 import FooterBox from "../components/FooterBox.jsx";
 import explorePic from "../assets/explorePic.png";
+import customArrow from '../assets/directArrow.svg';
 import "../styles/general.css";
 
 const Home = () => {
@@ -37,7 +38,7 @@ const Home = () => {
       <FAQ/>
 
       {/* Contact Form for more questions */}
-      <ContactForm/>
+      <ContactForm bgColor="bg-[#822e27]" textColor="text-white" bordersColor="border-white" arrow={customArrow} btnText="text-white" btnLine="border-white"/>
 
       {/* Footer */}
       <FooterBox/>

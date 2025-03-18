@@ -9,6 +9,7 @@ const SignUp = () => {
   
   const [errors, setErrors] = useState({});
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSubmitted, setIsSubmitted] = useState(false);
   
   const validate = () => {
     const newErrors = {};
@@ -48,12 +49,20 @@ const SignUp = () => {
     if (validate()) {
       //send the data to your backend here
       console.log('Form submitted successfully', formData);
-      // Resetting form 
-      setFormData({
-        fullName: '',
-        mobileNumber: '',
-        emailAddress: ''
-      });
+      setTimeout(() => {
+        setIsSubmitting(false);
+        setIsSubmitted(true);
+        setFormData({
+          fullName: '',
+          mobileNumber: '',
+          emailAddress: ''
+        });
+        
+        // Reset success message after 3 seconds
+        setTimeout(() => {
+          setIsSubmitted(false);
+        }, 3000);
+      }, 1000);
     }
     
     setIsSubmitting(false);
@@ -113,19 +122,21 @@ const SignUp = () => {
             {errors.emailAddress && <p className="text-red-500 text-sm mt-1">{errors.emailAddress}</p>}
           </div>
           
-          <div className="flex justify-end items-center">
-            <button
-              type="submit"
-              disabled={isSubmitting}
-              className="text-[#6ca2e3] flex group items-center justify-center cursor-pointer"
-            >
-                <span className="mr-4 font-medium border-b-2 border-[#6ca2e3] pb-1">SIGN UP</span>
+          {/* Submit button */}
+          <div className="flex justify-end items-center pb-2 group cursor-pointer"
+            onClick={handleSubmit}
+            disabled={isSubmitting}>
+                <span className="mr-4 font-medium border-b-2 text-[#6ca2e3] border-[#6ca2e3] w-14 pb-1">SEND</span>
                 <div className="w-8 h-8 rounded-full bg-white flex items-center justify-center">
-                  <img src={blueDirectArrow} alt="arrow-direction" className="w-full"/>
+                  <img src={blueDirectArrow} alt="arrow-direction" />
                 </div>
-
-            </button>
           </div>
+
+          {isSubmitted && (
+            <div className="mt-4 p-3 bg-green-100 text-green-800 rounded-bl-4xl">
+              Sign up successful!
+            </div>
+          )}
         </form>
       </div>
     </div>
