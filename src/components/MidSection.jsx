@@ -8,8 +8,11 @@ import trendingRealtyImg3 from '../assets/trendingRealtyImg3.png';
 import trendingRealtyImg4 from '../assets/trendingRealtyImg4.png';
 import trendingRealtyImg5 from '../assets/trendingRealtyImg5.png';
 import homeOwner from '../assets/homeOwner.png';
+import { useNavigate } from 'react-router-dom';
 
 const MidSection = () => {
+
+  const navigate = useNavigate();
   return (
     <div className="w-full">
       {/* Virtual Reality Tour Section */}
@@ -29,7 +32,7 @@ const MidSection = () => {
               without any hassle.
             </p>
             <div className="hidden md:inline-flex items-center pb-2 group cursor-pointer">
-              <span className="mr-4 font-medium border-b-2 border-white w-28 pb-1">EXPLORE VR</span>
+              <span className="mr-4 font-medium border-b-2 border-white w-28 pb-1" onClick={()=>navigate('/realty')}>EXPLORE VR</span>
               <div className="w-8 h-8 rounded-full bg-white flex items-center justify-center">
                 <img src={directArrow} alt="arrow-direction" className="w-full"/>
               </div>
@@ -47,7 +50,7 @@ const MidSection = () => {
         </div>
         {/*Mobile view only */}
         <div className="md:hidden flex justify-end items-center px-8 py-2 group cursor-pointer mt-2">
-            <span className="mr-4 font-medium border-b-2 border-white w-28 pb-1">EXPLORE VR</span>
+            <span className="mr-4 font-medium border-b-2 border-white w-28 pb-1" onClick={()=>navigate('/realty')}>EXPLORE VR</span>
             <div className="w-8 h-8 rounded-full bg-white flex items-center justify-center">
               <img src={directArrow} alt="arrow-direction" className="w-full"/>
             </div>
@@ -66,7 +69,7 @@ const MidSection = () => {
                 after units are selling fast, and you won't want to miss out.
               </p>
               <div className="hidden md:inline-flex items-center pb-2 group cursor-pointer text-[#6ca2e3]">
-                <span className="mr-4 font-medium border-b-2 border-[#6ca2e3] w-28 pb-1">EXPLORE VR</span>
+                <span className="mr-4 font-medium border-b-2 border-[#6ca2e3] w-36 pb-1" onClick={()=>navigate('/realty')}>EXPLORE REALTY</span>
                 <div className="w-8 h-8 rounded-full bg-white flex items-center justify-center">
                     <img src={blueDirectArrow} alt="arrow-direction" className="w-full"/>
                 </div>
@@ -109,7 +112,7 @@ const MidSection = () => {
         </div>
         {/*Mobile view only */}
         <div className="flex md:hidden justify-end items-center px-8 py-2 mt-2 group cursor-pointer text-[#6ca2e3]">
-          <span className="mr-4 font-medium border-b-2 border-[#6ca2e3] w-28 pb-1">EXPLORE VR</span>
+          <span className="mr-4 font-medium border-b-2 border-[#6ca2e3] w-36 pb-1" onClick={()=>navigate('/realty')}>EXPLORE REALTY</span>
           <div className="w-8 h-8 rounded-full bg-white flex items-center justify-center">
               <img src={blueDirectArrow} alt="arrow-direction" className="w-full"/>
           </div>
@@ -128,7 +131,7 @@ const MidSection = () => {
               never been easier. Don't miss out—become a homeowner today!
             </p>
             <div className="hidden md:inline-flex items-center pb-2 group cursor-pointer">
-              <span className="mr-4 font-medium border-b-2 border-white w-28 pb-1">EXPLORE VR</span>
+              <span className="mr-4 font-medium border-b-2 border-white w-36 pb-1" onClick={()=>navigate('/realty')}>EXPLORE REALTY</span>
               <div className="w-8 h-8 rounded-full bg-white flex items-center justify-center">
                 <img src={directArrow} alt="arrow-direction" className="w-full"/>
               </div>
@@ -144,7 +147,7 @@ const MidSection = () => {
         </div>
         {/*Mobile view only */}
         <div className="md:hidden flex justify-end items-center px-8 py-2 group cursor-pointer mt-2">
-          <span className="mr-4 font-medium border-b-2 border-white w-28 pb-1">EXPLORE VR</span>
+          <span className="mr-4 font-medium border-b-2 border-white w-36 pb-1" onClick={()=>navigate('/realty')}>EXPLORE REALTY</span>
           <div className="w-8 h-8 rounded-full bg-white flex items-center justify-center">
             <img src={directArrow} alt="arrow-direction" className="w-full"/>
           </div>

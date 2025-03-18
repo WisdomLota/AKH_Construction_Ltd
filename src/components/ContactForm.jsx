@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import defaultArrow from '../assets/blueDirectArrow.svg';
-// import customArrow from '../assets/blueDirectArrow.svg';
+
 
 const ContactForm = ({
   bgColor = 'bg-white', 
@@ -9,6 +9,7 @@ const ContactForm = ({
   arrow = defaultArrow,
   btnLine = 'border-[#6ca2e3]',
   btnText = 'text-[#6ca2e3]'}) => {
+
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
   const [emailError, setEmailError] = useState('');

@@ -69,12 +69,18 @@ const FAQ = () => {
                 </button>
               </div>
               
-              {/* Answer appears below the question on mobile when expanded */}
-              {expandedMobile === faq.id && (
-                <div className="mt-3 ml-8 bg-white rounded-lg shadow-xl p-4">
+              {/* Answer appears below the question on mobile with transition */}
+              <div 
+                className={`mt-3 ml-8 overflow-hidden transition-all duration-300 ease-in-out ${
+                  expandedMobile === faq.id ? 'max-h-48 opacity-100' : 'max-h-0 opacity-0'
+                }`}
+              >
+                <div className={`bg-white rounded-lg shadow-xl p-6 md:ml-4 transition-all duration-500 ease-in-out ${
+                isTransitioning ? 'opacity-0 transform translate-y-4' : 'opacity-100 transform translate-y-0'
+              }`}>
                   {faq.answer}
                 </div>
-              )}
+              </div>
             </div>
           ))}
         </div>
@@ -100,8 +106,12 @@ const FAQ = () => {
             ))}
           </div>
 
-          <div className="w-1/2 md:p-16 p-2 animate-bounce">
-            <div className="bg-white rounded-lg shadow-xl p-6 md:ml-4">
+          <div className="w-1/2 md:p-16 p-2">
+            <div 
+              className={`bg-white rounded-lg shadow-xl p-6 md:ml-4 transition-all duration-500 ease-in-out ${
+                isTransitioning ? 'opacity-0 transform translate-y-4' : 'opacity-100 transform translate-y-0'
+              }`}
+            >
               {faqData.find(faq => faq.id === selectedQuestion)?.answer}
             </div>
           </div>

@@ -1,8 +1,12 @@
 import realtyImageGroup from "../assets/realtyImageGroup.png";
 import realtyImageGroup2 from "../assets/realtyImageGroup2.png";
 import directArrow from "../assets/directArrow.svg";
+import { useNavigate } from "react-router-dom";
 
 const Features = () => {
+
+  const navigate = useNavigate();
+
   return (
     <div>
       <section className="background text-white">
@@ -51,7 +55,7 @@ const Features = () => {
           </div>
           
           {/* Explore button */}
-          <div className="flex justify-end items-center px-8">
+          <div className="flex justify-end items-center px-8" onClick={()=>navigate('/realty')}>
             <span className="mr-4 font-medium border-b-2 border-white pb-1">EXPLORE REALTY</span>
             <div className="w-8 h-8 rounded-full bg-white flex items-center justify-center">
               <img src={directArrow} alt="arrow-direction" className="w-4 h-4"/>
@@ -74,7 +78,7 @@ const Features = () => {
                   <li>&nbsp;• Dedicated Laundry Space</li>
                 </ul>
                 <div className="inline-flex items-center pb-2 group cursor-pointer">
-                  <span className="mr-4 font-semibold border-b-2 border-white w-36 pb-1">EXPLORE REALTY</span>
+                  <span className="mr-4 font-semibold border-b-2 border-white w-36 pb-1" onClick={()=>navigate('/realty')}>EXPLORE REALTY</span>
                   <div className="w-8 h-8 rounded-full bg-white flex items-center justify-center">
                     <img src={directArrow} alt="arrow-direction"/>
                   </div>

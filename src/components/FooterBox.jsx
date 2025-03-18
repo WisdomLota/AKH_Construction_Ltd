@@ -1,4 +1,5 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import defaultLogo from '../assets/footerLogoAKH.png';
 
 const FooterBox = ({ 
@@ -7,7 +8,9 @@ const FooterBox = ({
   mainTextColor = 'text-[#822e27]', 
   footerTextColor = 'text-white',
   logo = defaultLogo }) => {
+
   const currentYear = new Date().getFullYear();
+  const navigate = useNavigate();
   
   return (
     <div className={`w-full ${mainBgColor}`}>
@@ -23,21 +26,21 @@ const FooterBox = ({
 
           {/* Quick Links */}
           <div className="mb-8">
-            <h3 className=" font-bold mb-3">Quick Links</h3>
-            <ul className="space-y-2">
-              <li><a href="#" >Home</a></li>
-              <li><a href="#" >Explore</a></li>
-              <li><a href="#" >About</a></li>
-              <li><a href="#" >Contact</a></li>
+            <h3 className="font-bold mb-3">Quick Links</h3>
+            <ul className="space-y-2 cursor-pointer">
+              <li><a onClick={()=>navigate('/')} >Home</a></li>
+              <li><a onClick={()=>navigate('/realty')}>Explore</a></li>
+              <li><a onClick={()=>navigate('/about')}>About</a></li>
+              <li><a onClick={()=>navigate('/contact')}>Contact</a></li>
             </ul>
           </div>
 
           {/* Information */}
           <div className="mb-8">
             <h3 className="font-bold mb-3">Information</h3>
-            <ul className="space-y-2">
-              <li><a href="#" >Terms of use</a></li>
-              <li><a href="#" >Privacy Policy</a></li>
+            <ul className="space-y-2 cursor-pointer">
+              <li><a onClick={()=>navigate('/terms-of-use')}>Terms of use</a></li>
+              <li><a onClick={()=>navigate('/privacy-policy')} >Privacy Policy</a></li>
             </ul>
           </div>
 
