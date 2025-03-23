@@ -158,7 +158,7 @@ const Contact = () => {
                       className="text-[#6ca2e3] flex group items-center justify-center cursor-pointer"
                     >
                         <span className="mr-4 font-medium border-b-2 border-[#6ca2e3] pb-1">SEND</span>
-                        <div className="w-8 h-8 rounded-full bg-white flex items-center justify-center">
+                        <div className="w-14 h-14 rounded-full bg-white flex items-center justify-center">
                           <img src={blueDirectArrow} alt="arrow-direction" className="w-full"/>
                         </div>
         

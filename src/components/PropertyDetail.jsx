@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import NavBar from "../components/NavBar"
 import customLogo from "../assets/AKHRealtyLogoRed.png";
@@ -21,10 +21,39 @@ const PropertyDetail = () => {
   // Find the property with the matching ID
   const property = properties.find(p => p.id === id);
   
+  // State for current displayed image
+  const [currentImage, setCurrentImage] = useState(0);
+  const [allImages, setAllImages] = useState([]);
+  
+  // Set up all images array when property is loaded
+  useEffect(() => {
+    if (property) {
+      // Combine main image with gallery images into one array
+      const images = [property.image, ...(property.galleryImages || [])];
+      setAllImages(images);
+    }
+  }, [property]);
+  
+  // Set up automatic image rotation
+  useEffect(() => {
+    if (allImages.length <= 1) return;
+    
+    const interval = setInterval(() => {
+      setCurrentImage((prev) => (prev + 1) % allImages.length);
+    }, 3000); // Change image every 3 seconds
+    
+    return () => clearInterval(interval);
+  }, [allImages]);
+  
+  // Handle thumbnail click
+  const handleThumbnailClick = (index) => {
+    setCurrentImage(index);
+  };
+  
   // If property not found, show error message
   if (!property) {
     return (
-      <div className="container mx-auto px-4 py-8 text-center  text-[#822e27]">
+      <div className="container mx-auto px-4 py-8 text-center text-[#822e27]">
         <h2 className="text-2xl font-bold">Property not found</h2>
         <p className="mt-4">The property you're looking for does not exist.</p>
         <Link to="/realty" className="mt-4 inline-block bg-[#6ca2e3] text-white px-4 py-2 rounded">
@@ -43,20 +72,33 @@ const PropertyDetail = () => {
           <div className="bg-white overflow-hidden mt-20">
             <div className="grid grid-cols-1 xl:grid-cols-2 gap-6">
               <div>
-                <img 
-                  src={property.image} 
-                  alt={property.title} 
-                  className="w-full h-auto object-cover"
-                />
+                {/* Main image container with transition effect */}
+                <div className="overflow-hidden rounded-tl-4xl">
+                  <img 
+                    src={allImages[currentImage]} 
+                    alt={property.title} 
+                    className="w-full h-auto object-cover transition-all duration-500 ease-in-out"
+                  />
+                </div>
 
-                <div className="flex space-x-4 mt-4 ">
-                  {property.galleryImages && property.galleryImages.map((img, index) => (
-                    <img 
+                {/* Image thumbnails with active state indicator */}
+                <div className="flex space-x-4 mt-4">
+                  {allImages.slice(1).map((img, index) => (
+                    <div
                       key={index}
-                      src={img} 
-                      alt={`${property.title} - ${index}`} 
-                      className={`h-24 w-36 object-cover cursor-pointer`}
-                    />
+                      onClick={() => handleThumbnailClick(index)}
+                      className={`cursor-pointer transition-all duration-300 ${
+                        currentImage === index+1 
+                          ? 'ring-2 ring-[#6ca2e3] scale-105' 
+                          : 'opacity-80 hover:opacity-100'
+                      }`}
+                    >
+                      <img 
+                        src={img} 
+                        alt={`${property.title} - ${index}`} 
+                        className="h-24 w-36 object-cover"
+                      />
+                    </div>
                   ))}
                 </div>
               </div>

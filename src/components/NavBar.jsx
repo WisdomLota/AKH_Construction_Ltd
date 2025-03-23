@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import defaultLogo from "../assets/AKHRealtyLogo.png";
 import defaultMenu from "../assets/hamMenu.svg";
 
@@ -19,7 +19,15 @@ const NavBar = ({
     setIsMenuOpen(!isMenuOpen);
   }
 
+  const navItems = [
+    {page: 'Home', link: '/'},
+    {page: 'Explore', link: '/realty'},
+    {page: 'About', link: '/about'},
+    {page: 'Contact', link: '/contact'}
+  ]
   const navigate = useNavigate();
+  const location = useLocation();
+
     return (
       <div>
       <nav className={`bg-transparent absolute w-full z-10 px-4 py-6 mt-2 ${shadow}`}>
@@ -37,26 +45,30 @@ const NavBar = ({
         {/* Logo */}
 
         {/*Desktop Menu - hidden on mobile */}
-        <div className={`hidden md:flex md:order-1 md:justify-end md:space-x-8 ${textColor} font-medium`}>
+        <nav className={`hidden md:flex md:order-1 md:justify-end md:space-x-8 ${textColor} font-medium`}>
           <div className="space-x-8 mt-2 flex cursor-pointer">
-            <p onClick={()=>navigate('/')} >HOME</p>
-            <p onClick={()=>navigate('/realty')}>EXPLORE</p>
-            <p onClick={()=>navigate('/about')}>ABOUT</p>
-            <p onClick={()=>navigate('/contact')} >CONTACT</p>
+            <ul className="flex space-x-8 text-xl font-medium">
+              {navItems.map((item) => (
+                <li key={item.page} className={`cursor-pointer ${location.pathname == item.link ? 'text-[#6ca2e3]' : ''} hover:text-[#6ca2e3]`}
+                onClick={()=>navigate(`${item.link}`)}>{item.page}</li>
+              ))}
+            </ul>
           </div>
           <div className="md:order-2 md:px-16">
             <img src={logo} alt="AKH Realty Logo" className="h-16 md:h-12"/>
           </div>
-        </div>
+        </nav>
 
         {/*Mobile Menu - slide down when open */}
         {isMenuOpen && (
           <div className={`md:hidden ${borderColor} border-2 w-fit bg-[#822e27] h-fit mt-4 p-4 rounded`}>
             <div className={`flex flex-col space-y-4 ${menuTextColor} font-medium cursor-pointer`}>
-              <p onClick={()=>navigate('/')} >HOME</p>
-              <p onClick={()=>navigate('/realty')}>EXPLORE</p>
-              <p onClick={()=>navigate('/about')}>ABOUT</p>
-              <p onClick={()=>navigate('/contact')} >CONTACT</p>
+              <ul className="flex flex-col space-y-4 p-4 text-xl font-medium">
+                {navItems.map((item) => (
+                  <li key={item.page} className={`cursor-pointer ${location.pathname == item.link ? 'text-[#6ca2e3]' : ''} hover:text-[#6ca2e3]`}
+                  onClick={()=>navigate(`${item.link}`)}>{item.page}</li>
+                ))}
+              </ul>
             </div>
           </div>
         )}
