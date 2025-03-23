@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 const FAQ = () => {
   const [selectedQuestion, setSelectedQuestion] = useState(1);
@@ -28,6 +28,24 @@ const FAQ = () => {
       answer: "Discounts are available for first-time homebuyers, early payments, and seasonal promotions. You can also join our loyalty program for additional savings on your purchase."
     }
   ];
+
+  // Auto-rotation effect
+  useEffect(() => {
+    const rotationTimer = setInterval(() => {
+      setIsTransitioning(true);
+      
+      setTimeout(() => {
+        // Move to the next question (cycle back to 1 if at the end)
+        const nextQuestion = selectedQuestion >= faqData.length ? 1 : selectedQuestion + 1;
+        setSelectedQuestion(nextQuestion);
+        setExpandedMobile(nextQuestion);
+        setIsTransitioning(false);
+      }, 300); // Half of the transition time
+    }, 3000); // Rotate every 3 seconds
+
+    // Clean up timer on component unmount
+    return () => clearInterval(rotationTimer);
+  }, [selectedQuestion, faqData.length]);
 
   const handleQuestionClick = (id) => {
     if (selectedQuestion !== id) {
