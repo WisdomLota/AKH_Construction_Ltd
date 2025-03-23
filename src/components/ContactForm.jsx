@@ -67,16 +67,16 @@ const ContactForm = ({
   };
 
   return (
-    <div className={`flex flex-col md:flex-row w-full mx-auto lg:p-24 p-8 ${bgColor} ${textColor}`}>
+    <div className={`flex flex-col md:flex-row w-full mx-auto lg:p-24 p-8 ${bgColor} ${textColor} min-h-screen md:items-center md:justify-center`}>
       {/* Left section */}
       <div className="md:w-1/2 mb-8 md:mb-0 flex items-center">
-        <h1 className="text-4xl md:text-5xl font-medium leading-tight">
+        <h1 className="text-4xl md:text-5xl font-medium leading-tight xl:ml-20 xl:p-0 p-8">
           STILL HAVE MORE QUESTIONS FOR US?
         </h1>
       </div>
 
       {/* Right section */}
-      <div className="md:w-1/2 md:pl-10">
+      <div className="md:w-1/2 md:pl-10 xl:mr-20 p-8">
         <div className="mb-6">
           <h2 className="text-2xl md:text-3xl font-medium mb-6">
             Feel Free to send us a message
@@ -111,7 +111,7 @@ const ContactForm = ({
             onClick={handleSubmit}
             disabled={isSubmitting}>
                 <span className={`mr-4 font-medium border-b-2 w-14 pb-1 ${btnLine} ${btnText}`}>SEND</span>
-                <div className="w-8 h-8 rounded-full bg-white flex items-center justify-center">
+                <div className="w-14 h-14 rounded-full bg-white flex items-center justify-center">
                   <img src={arrow} alt="arrow-direction" />
                 </div>
             </div>

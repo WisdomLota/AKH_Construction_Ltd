@@ -1,15 +1,15 @@
 const About = () => {
     return (
-        <div>
+        <div className="min-h-screen flex flex-col justify-center items-center">
             {/* About Section */}
             <section className="py-20 lg:px-20 px-4 text">
               <div className="container mx-auto px-4">
                 <div className="flex flex-col md:flex-row justify-around h-fit">
-                  <div className="w-full md:w-1/2 flex md:items-center md:justify-center mb-4">
+                  <div className="w-full md:w-1/2 flex md:items-center md:justify-start mb-4">
                     <h1 className="text-4xl md:text-6xl font-semibold">ABOUT</h1>
                   </div>
                   <div className="w-full md:w-1/2">
-                    <div className="max-w-3xl space-y-8 font-medium">
+                    <div className="max-w-4xl space-y-8 font-medium">
                       <p>
                         At AKHCON Realty, we pride ourselves on offering a seamless blend of 
                         modernized homes and stunning aesthetics. Our mission is to cater to aspiring 

@@ -8,7 +8,7 @@ const Features = () => {
   const navigate = useNavigate();
 
   return (
-    <div>
+    <div className="min-h-screen">
       <section className="background text-white">
         {/* Mobile view */}
         <div className="lg:hidden py-12">
@@ -57,8 +57,8 @@ const Features = () => {
           {/* Explore button */}
           <div className="flex justify-end items-center px-8" onClick={()=>navigate('/realty')}>
             <span className="mr-4 font-medium border-b-2 border-white pb-1">EXPLORE REALTY</span>
-            <div className="w-8 h-8 rounded-full bg-white flex items-center justify-center">
-              <img src={directArrow} alt="arrow-direction" className="w-4 h-4"/>
+            <div className="w-12 h-12 rounded-full bg-white flex items-center justify-center">
+              <img src={directArrow} alt="arrow-direction" className="w-full"/>
             </div>
           </div>
         </div>
@@ -67,8 +67,8 @@ const Features = () => {
         <div className="hidden lg:block">
           <div className="mx-auto">
             <div className="flex flex-row">
-              <div className="space-y-6 w-1/2 flex flex-col justify-center items-center p-4">
-                <h1 className="text-4xl font-semibold -ml-20">REALTY</h1>
+              <div className="space-y-6 w-1/2 flex flex-col justify-center items-start xl:px-48 px-20">
+                <h1 className="text-4xl font-semibold">REALTY</h1>
                 <ul className="space-y-4">
                   <li>&nbsp;• Spacious</li>
                   <li>&nbsp;• Pre wired AC</li>
@@ -79,7 +79,7 @@ const Features = () => {
                 </ul>
                 <div className="inline-flex items-center pb-2 group cursor-pointer">
                   <span className="mr-4 font-semibold border-b-2 border-white w-36 pb-1" onClick={()=>navigate('/realty')}>EXPLORE REALTY</span>
-                  <div className="w-8 h-8 rounded-full bg-white flex items-center justify-center">
+                  <div className="w-14 h-14 rounded-full bg-white flex items-center justify-center">
                     <img src={directArrow} alt="arrow-direction"/>
                   </div>
                 </div>

@@ -75,12 +75,12 @@ const Contact = () => {
         <div className="bg-gray-50 min-h-screen p-16 md:p-24 lg:p-32 text-[#822e27]">
           <div className="mx-auto items-center mt-12 space-y-12">
             {/* Left Column */}
-            <div className="flex flex-col md:flex-row justify-evenly space-x-8">
+            <div className="flex flex-col md:flex-row justify-evenly space-x-8 ">
               <div className='w-1/2 md:flex md:justify-center md:items-center mb-2'>
                 <h1 className="text-4xl md:text-6xl font-semibold">CONTACT</h1>
               </div>
 
-              <div className='lg:w-1/2'>
+              <div className='lg:w-1/2 xl:mr-24'>
                 <h2 className="text-2xl font-medium mb-2">Feel Free To Reach Out;</h2>
 
                 <div className="space-y-2">
@@ -119,7 +119,7 @@ const Contact = () => {
             </div>
 
             {/* Right Column */}
-            <div className="flex flex-col md:flex-row justify-evenly space-x-8 mt-20">
+            <div className="flex flex-col md:flex-row justify-evenly space-x-8 mt-20 xl:mr-32">
               
               <div className="lg:w-1/2 flex flex-col justify-center items-center">
                 <h2 className="text-3xl font-medium leading-tight lg:-mt-12 mb-4 lg:px-40">

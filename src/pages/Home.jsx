@@ -12,6 +12,7 @@ import customArrow from '../assets/directArrow.svg';
 import "../styles/general.css";
 
 const Home = () => {
+  
     return (
     <div className="min-h-screen flex flex-col">
       <div style={{backgroundImage: `url(${explorePic})`, backgroundSize: "cover", backgroundPosition: "center"}} className="h-fit border-bottom-left-rounded">

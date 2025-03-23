@@ -44,8 +44,8 @@ const FAQ = () => {
 
   return (
     <div className="w-full py-8 px-4 md:px-8 bg-white">
-      <div className="mx-auto lg:p-20 p-4">
-        <h2 className="text-4xl md:text-5xl font-semibold text-[#8B2A23] mb-8">
+      <div className="mx-auto lg:p-20 p-8 xl:ml-20">
+        <h2 className="text-4xl md:text-5xl font-semibold text-[#8B2A23] lg:mb-1 mb-8">
           Frequently<br />
           Asked<br />
           Questions
@@ -75,7 +75,7 @@ const FAQ = () => {
                   expandedMobile === faq.id ? 'max-h-48 opacity-100' : 'max-h-0 opacity-0'
                 }`}
               >
-                <div className={`bg-white rounded-lg shadow-xl p-6 md:ml-4 transition-all duration-500 ease-in-out ${
+                <div className={`bg-white text-[#822e27] rounded-lg shadow-xl p-6 md:ml-4 transition-all duration-500 ease-in-out ${
                 isTransitioning ? 'opacity-0 transform translate-y-4' : 'opacity-100 transform translate-y-0'
               }`}>
                   {faq.answer}
@@ -86,7 +86,7 @@ const FAQ = () => {
         </div>
 
         {/* Desktop view (side by side) */}
-        <div className="hidden md:flex md:flex-row">
+        <div className="hidden md:flex md:flex-row justify-center items-center ">
           <div className="w-1/2 pr-6">
             {faqData.map((faq) => (
               <div 
@@ -96,19 +96,19 @@ const FAQ = () => {
               >
                 <div 
                   className={`w-4 h-4 rounded-full mt-1.5 mr-4 flex-shrink-0 ${
-                    selectedQuestion === faq.id ? 'bg-blue-400' : 'bg-[#8B2A23]'
+                    selectedQuestion === faq.id ? 'bg-blue-400' : 'bg-[#822e27]'
                   }`}
                 ></div>
-                <button className="text-left text-[#8B2A23] hover:text-[#A84034]">
+                <button className="text-left text-[#8B2A23] hover:text-[#822e27]">
                   {faq.question}
                 </button>
               </div>
             ))}
           </div>
 
-          <div className="w-1/2 md:p-16 p-2">
+          <div className="w-1/2 md:p-16 p-8 ">
             <div 
-              className={`bg-white rounded-lg shadow-xl p-6 md:ml-4 transition-all duration-500 ease-in-out ${
+              className={`bg-white text-[#822e27] rounded-lg shadow-xl p-6 md:ml-4 transition-all duration-500 ease-in-out min-h-48 flex flex-col justify-center items-center ${
                 isTransitioning ? 'opacity-0 transform translate-y-4' : 'opacity-100 transform translate-y-0'
               }`}
             >

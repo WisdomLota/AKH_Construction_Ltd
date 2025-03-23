@@ -14,7 +14,7 @@ const RealtyCard = ({ property }) => {
   
   return (
     <div 
-      className="bg-white rounded-br-4xl rounded-tl-4xl shadow-lg overflow-hidden cursor-pointer max-w-sm text-[#822e27]"
+      className="bg-white rounded-br-4xl rounded-tl-4xl shadow-lg overflow-hidden cursor-pointer max-w-md text-[#822e27]"
       onClick={handleClick}
     >
       <div className="relative mb-4">

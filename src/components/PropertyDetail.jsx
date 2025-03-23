@@ -41,7 +41,7 @@ const PropertyDetail = () => {
 
         <div className="bg-white min-h-screen p-8 md:p-12 lg:p-24 text-[#822e27]">
           <div className="bg-white overflow-hidden mt-20">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 xl:grid-cols-2 gap-6">
               <div>
                 <img 
                   src={property.image} 
@@ -61,7 +61,7 @@ const PropertyDetail = () => {
                 </div>
               </div>
               
-              <div className="p-6">
+              <div className="">
                 <h2 className="text-3xl font-semibold mb-4">{property.title}</h2>
                 <div className="flex justify-between items-start pt-2">
                   <h3 className="text-lg font-semibold">Overview</h3>
@@ -105,7 +105,7 @@ const PropertyDetail = () => {
                   </div>
                 </div>
               
-                <div className="mt-6 text-md font-bold">
+                <div className="2xl:mt-20 md:mt-2 text-md font-bold">
                   NOTICE: All houses are delivered without internal furnishing
                 </div>
               </div>
