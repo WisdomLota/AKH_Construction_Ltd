@@ -40,8 +40,8 @@ const FAQ = () => {
         setSelectedQuestion(nextQuestion);
         setExpandedMobile(nextQuestion);
         setIsTransitioning(false);
-      }, 300); // Half of the transition time
-    }, 3000); // Rotate every 3 seconds
+      }, 800); // Half of the transition time
+    }, 4000); // Rotate every 3 seconds
 
     // Clean up timer on component unmount
     return () => clearInterval(rotationTimer);
@@ -63,9 +63,9 @@ const FAQ = () => {
   return (
     <div className="w-full py-8 px-4 md:px-8 bg-white">
       <div className="mx-auto lg:p-20 p-8 xl:ml-20">
-        <h2 className="text-4xl md:text-5xl font-semibold text-[#8B2A23] lg:mb-1 mb-8">
-          Frequently<br />
-          Asked<br />
+        <h2 className="text-6xl md:text-8xl font-semibold text-[#8B2A23] lg:mb-1 mb-8">
+          Frequently
+          Asked
           Questions
         </h2>
 
@@ -89,8 +89,8 @@ const FAQ = () => {
               
               {/* Answer appears below the question on mobile with transition */}
               <div 
-                className={`mt-3 ml-8 overflow-hidden transition-all duration-300 ease-in-out ${
-                  expandedMobile === faq.id ? 'max-h-48 opacity-100' : 'max-h-0 opacity-0'
+                className={`mt-3 ml-8 overflow-hidden transition-all shadow-xl duration-300 ease-in-out ${
+                  expandedMobile === faq.id ? 'h-fit opacity-100' : 'max-h-0 opacity-0'
                 }`}
               >
                 <div className={`bg-white text-[#822e27] rounded-lg shadow-xl p-6 md:ml-4 transition-all duration-500 ease-in-out ${
@@ -104,16 +104,16 @@ const FAQ = () => {
         </div>
 
         {/* Desktop view (side by side) */}
-        <div className="hidden md:flex md:flex-row justify-center items-center ">
+        <div className="hidden md:flex md:flex-row justify-center items-center mt-12">
           <div className="w-1/2 pr-6">
             {faqData.map((faq) => (
               <div 
                 key={faq.id} 
-                className="mb-6 flex items-start font-medium cursor-pointer" 
+                className="mb-6 flex items-start font-medium cursor-pointer space-y-4 " 
                 onClick={() => handleQuestionClick(faq.id)}
               >
                 <div 
-                  className={`w-4 h-4 rounded-full mt-1.5 mr-4 flex-shrink-0 ${
+                  className={`w-4 h-4 mt-1.5 rounded-full mr-4 flex-shrink-0 ${
                     selectedQuestion === faq.id ? 'bg-blue-400' : 'bg-[#822e27]'
                   }`}
                 ></div>

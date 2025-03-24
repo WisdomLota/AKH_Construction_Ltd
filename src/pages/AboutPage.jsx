@@ -12,7 +12,7 @@ const AboutPage = () => {
   return (
     <div>
         {/**Navigation */}
-        <NavBar logo={customLogo} shadow='shadow-xs' menu={customMenu}/>
+        <NavBar logo={customLogo} shadow='shadow-md' menu={customMenu}/>
 
         <div className="bg-white min-h-screen p-8 md:p-12 text-[#822e27]">
             <div className='mt-8'>
@@ -20,10 +20,14 @@ const AboutPage = () => {
                 <About/>
 
                 {/**FAQ section */}
+                <div className='xl:-ml-20'>
                 <FAQ/>
+                </div>
 
                 {/**More questions? */}
+                <div className='xl:-ml-20'>
                 <ContactForm />
+                </div>
             </div>
         </div>
 

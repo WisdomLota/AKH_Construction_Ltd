@@ -3,13 +3,17 @@ import NavBar  from "../components/NavBar"
 import FooterBox from '../components/FooterBox'
 import customLogo from "../assets/AKHRealtyLogoRed.png";
 import customFooterLogo from "../assets/AKHRealtyLogo.png";
-import blueDirectArrow from '../assets/blueDirectArrow.svg';
+import defaultArrow from '../assets/blueDirectArrow.svg';
 import customMenu from "../assets/hamMenuRed.svg";
 import mail from "../assets/emailImg.svg";
 import whatsapp from "../assets/whatsAppImg.svg";
 import phone from "../assets/phoneImg.svg";
 
-const Contact = () => {
+const Contact = ({
+  arrow = defaultArrow,
+  btnLine = 'border-[#6ca2e3]',
+  btnText = 'text-[#6ca2e3]'
+}) => {
 
     const [email, setEmail] = useState('');
     const [message, setMessage] = useState('');
@@ -77,20 +81,20 @@ const Contact = () => {
             {/* Left Column */}
             <div className="flex flex-col md:flex-row justify-evenly space-x-8 ">
               <div className='w-1/2 md:flex md:justify-center md:items-center mb-2'>
-                <h1 className="text-4xl md:text-6xl font-semibold">CONTACT</h1>
+                <h1 className="text-6xl md:text-8xl font-semibold mb-4">CONTACT</h1>
               </div>
 
-              <div className='lg:w-1/2 xl:mr-24'>
-                <h2 className="text-2xl font-medium mb-2">Feel Free To Reach Out;</h2>
+              <div className='lg:w-1/2'>
+                <h2 className="text-2xl font-medium mb-12">Feel Free To Reach Out;</h2>
 
-                <div className="space-y-2">
+                <div className="space-y-12">
                   <div className="flex items-center space-x-4">
                     <div >
                       <img src={mail} alt="email" />
                     </div>
                     <div>
                       <p className="text-lg font-medium ">Email Address</p>
-                      <p >selsodeno@yahoo.com</p>
+                      <p >sesedeno@yahoo.com</p>
                     </div>
                   </div>
 
@@ -119,10 +123,10 @@ const Contact = () => {
             </div>
 
             {/* Right Column */}
-            <div className="flex flex-col md:flex-row justify-evenly space-x-8 mt-20 xl:mr-32">
+            <div className="flex flex-col md:flex-row justify-evenly space-x-8 mt-40 ">
               
               <div className="lg:w-1/2 flex flex-col justify-center items-center">
-                <h2 className="text-3xl font-medium leading-tight lg:-mt-12 mb-4 lg:px-40">
+                <h2 className="text-3xl md:text-5xl leading-tight font-semibold lg:-mt-12 mb-4 lg:px-12">
                   You Could Also Just Send Us a Direct Message;
                 </h2>
               </div>
@@ -151,18 +155,13 @@ const Contact = () => {
                 </div>
         
                 {/* Submit button */}
-                <div className="flex justify-end items-center">
-                    <button
-                      type="submit"
-                      disabled={isSubmitting}
-                      className="text-[#6ca2e3] flex group items-center justify-center cursor-pointer"
-                    >
-                        <span className="mr-4 font-medium border-b-2 border-[#6ca2e3] pb-1">SEND</span>
-                        <div className="w-14 h-14 rounded-full bg-white flex items-center justify-center">
-                          <img src={blueDirectArrow} alt="arrow-direction" className="w-full"/>
-                        </div>
-        
-                    </button>
+                <div className="flex justify-end items-center pb-2 group cursor-pointer"
+                onClick={handleSubmit}
+                disabled={isSubmitting}>
+                    <span className={`mr-4 font-medium border-b-2 w-14 pb-1 ${btnLine} ${btnText}`}>SEND</span>
+                    <div className="w-14 h-14 rounded-full bg-white flex items-center justify-center">
+                      <img src={arrow} alt="arrow-direction" />
+                    </div>
                 </div>
                 
                 {isSubmitted && (

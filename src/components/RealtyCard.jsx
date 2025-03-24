@@ -14,10 +14,10 @@ const RealtyCard = ({ property }) => {
   
   return (
     <div 
-      className="bg-white rounded-br-4xl rounded-tl-4xl shadow-lg overflow-hidden cursor-pointer max-w-md text-[#822e27]"
+      className="bg-white rounded-br-4xl rounded-tl-4xl shadow-xl overflow-hidden cursor-pointer max-w-max text-[#822e27]"
       onClick={handleClick}
     >
-      <div className="relative mb-4">
+      <div className="relative mb-6">
         <img 
           src={property.image} 
           alt={property.title} 
@@ -25,7 +25,7 @@ const RealtyCard = ({ property }) => {
         />
       </div>
       
-      <div className="px-8 py-4 space-y-8">
+      <div className="px-8 py-8 space-y-8">
         <h3 className="text-2xl font-bold">{property.title}</h3>
         
         <div className="flex justify-between my-4 mb-8">
@@ -57,8 +57,8 @@ const RealtyCard = ({ property }) => {
         <p className="text-sm">{property.description}</p>
         
         <div className="flex justify-end items-center mt-2 group cursor-pointer text-[#6ca2e3]">
-          <span className="mr-2 font-medium text-sm border-b-2 border-[#6ca2e3] w-16 pb-1">EXPLORE</span>
-          <div className="w-8 h-8 rounded-full bg-white flex items-center justify-center">
+          <span className="mr-2 font-medium text-sm border-b-2 border-[#6ca2e3] w-18 pb-1">EXPLORE</span>
+          <div className="w-12 h-12 rounded-full bg-white flex items-center justify-center">
               <img src={blueDirectArrow} alt="arrow-direction" className="w-full"/>
           </div>
         </div>

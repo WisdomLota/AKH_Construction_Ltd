@@ -13,11 +13,11 @@ const RealtyPage = () => {
     <div>
 
         {/**Navigation */}
-        <NavBar logo={customLogo} menu={customMenu} shadow='shadow-xs'/>
+        <NavBar logo={customLogo} menu={customMenu} shadow='shadow-md'/>
 
-        <div className="bg-white mx-auto grid justify-center items-center min-h-screen p-8 md:p-12 lg:p-24 text-[#822e27]">
-          <h1 className="text-4xl font-bold mb-6 lg:mt-8 mt-20 ">REALTY</h1>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="bg-white mx-auto grid justify-center items-center min-h-screen p-12 md:p-16 lg:p-28 text-[#822e27]">
+          <h1 className=" text-4xl md:text-6xl font-semibold mb-6 lg:mt-16 mt-20 ">REALTY</h1>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
             {properties.map(property => (
               <RealtyCard key={property.id} property={property} />
             ))}

@@ -68,7 +68,7 @@ const Features = () => {
           <div className="mx-auto">
             <div className="flex flex-row">
               <div className="space-y-6 w-1/2 flex flex-col justify-center items-start xl:px-48 px-20">
-                <h1 className="text-4xl font-semibold">REALTY</h1>
+                <h1 className="text-6xl font-semibold">REALTY</h1>
                 <ul className="space-y-4">
                   <li>&nbsp;• Spacious</li>
                   <li>&nbsp;• Pre wired AC</li>

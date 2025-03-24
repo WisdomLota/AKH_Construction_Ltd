@@ -6,6 +6,7 @@ import customMenu from "../assets/hamMenuRed.svg";
 import bedIcon from "../assets/bedIcon.svg";
 import bathIcon from "../assets/bathIcon.svg";
 import size from "../assets/sizeIcon.svg";
+import directArrow from '../assets/directArrow.svg';
 import blueDirectArrow from '../assets/blueDirectArrow.svg';
 import FooterBox from '../components/FooterBox';
 import customFooterLogo from "../assets/AKHRealtyLogo.png";
@@ -40,7 +41,7 @@ const PropertyDetail = () => {
     
     const interval = setInterval(() => {
       setCurrentImage((prev) => (prev + 1) % allImages.length);
-    }, 3000); // Change image every 3 seconds
+    }, 5000); // Change image every 3 seconds
     
     return () => clearInterval(interval);
   }, [allImages]);
@@ -66,18 +67,18 @@ const PropertyDetail = () => {
   return (
     <div>
         {/**Navigation */}
-        <NavBar logo={customLogo} menu={customMenu} shadow="shadow-xs"/>
+        <NavBar logo={customLogo} menu={customMenu} shadow="shadow-md"/>
 
         <div className="bg-white min-h-screen p-8 md:p-12 lg:p-24 text-[#822e27]">
           <div className="bg-white overflow-hidden mt-20">
             <div className="grid grid-cols-1 xl:grid-cols-2 gap-6">
               <div>
                 {/* Main image container with transition effect */}
-                <div className="overflow-hidden rounded-tl-4xl">
+                <div className="overflow-hidden rounded-tl-4xl h-96">
                   <img 
                     src={allImages[currentImage]} 
                     alt={property.title} 
-                    className="w-full h-auto object-cover transition-all duration-500 ease-in-out"
+                    className="w-full h-full object-cover transition-all duration-500 ease-in-out"
                   />
                 </div>
 
@@ -103,7 +104,7 @@ const PropertyDetail = () => {
                 </div>
               </div>
               
-              <div className="">
+              <div className="mt-8">
                 <h2 className="text-3xl font-semibold mb-4">{property.title}</h2>
                 <div className="flex justify-between items-start pt-2">
                   <h3 className="text-lg font-semibold">Overview</h3>
@@ -141,8 +142,8 @@ const PropertyDetail = () => {
                 <p>{property.description}</p>
               
                 <div className="flex justify-end items-center mt-2 group cursor-pointer text-[#6ca2e3]">
-                  <span className="mr-2 font-medium text-sm border-b-2 border-[#6ca2e3] w-16 pb-1">EXPLORE</span>
-                  <div className="w-8 h-8 rounded-full bg-white flex items-center justify-center">
+                  <span className="mr-2 font-medium text-sm border-b-2 border-[#6ca2e3] w-18 pb-1">EXPLORE</span>
+                  <div className="w-12 h-12 rounded-full bg-white flex items-center justify-center">
                       <img src={blueDirectArrow} alt="arrow-direction" className="w-full"/>
                   </div>
                 </div>
@@ -156,7 +157,7 @@ const PropertyDetail = () => {
             {/**Map Section */}
             <div className="mb-8 mt-24">
                 <h2 className="text-xl font-bold mb-4">Location</h2>
-                <div className="h-64 rounded-bl-4xl">
+                <div className="h-64">
                   <iframe 
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d253682.45932733244!2d3.1191195!3d6.524379!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b8b2ae68280c1%3A0xdc9e87a367c3d9cb!2sLagos!5e0!3m2!1sen!2sng!4v1708386001056!5m2!1sen!2sng"
                     width="100%" 
@@ -165,6 +166,7 @@ const PropertyDetail = () => {
                     allowFullScreen="" 
                     loading="lazy" 
                     referrerPolicy="no-referrer-when-downgrade"
+                    className='rounded-bl-4xl rounded-tr-4xl'
                   ></iframe>
                 </div>
             </div>
@@ -207,8 +209,8 @@ const PropertyDetail = () => {
           </div>
               
           <div className="mt-6">
-            <Link to="/realty" className="text-[#6ca2e3] font-semibold flex items-center space-x-2">
-              <img src={blueDirectArrow} alt="arrow-direction" className="w-8 h-8"/>
+            <Link to="/realty" className="text-[#822e27] font-semibold flex items-center space-x-2">
+              <img src={directArrow} alt="arrow-direction" className="w-8 h-8"/>
               <p>Back to listings</p>
             </Link>
           </div>

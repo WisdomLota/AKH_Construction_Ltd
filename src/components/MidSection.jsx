@@ -29,7 +29,7 @@ const MidSection = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentMainImage((prev) => (prev + 1) % trendingImages.length);
-    }, 3000); // Change image every 3 seconds
+    }, 5000); // Change image every 3 seconds
     
     return () => clearInterval(interval);
   }, [trendingImages.length]);
@@ -45,7 +45,7 @@ const MidSection = () => {
       <section className="w-full background text-white py-12 min-h-screen flex flex-col md:items-center md:justify-center">
         <div className="container mx-auto px-4 md:px-8 lg:px-16 flex flex-col md:flex-row items-center">
           <div className="md:w-1/2 mb-4 md:mb-0 p-8 xl:ml-24">
-            <h2 className="text-4xl lg:text-5xl font-semibold mb-8">VIRTUAL REALITY TOUR</h2>
+            <h2 className="text-4xl lg:text-6xl font-semibold mb-8">VIRTUAL REALITY TOUR</h2>
             <p className="mb-8">
               Step into the future of home buying with AKHI Realty! 
               Experience our cutting-edge VR technology and explore 
@@ -84,11 +84,11 @@ const MidSection = () => {
       </section>
 
       {/* Trending Realty Section */}
-      <section className="w-full bg-white py-16 min-h-screen flex flex-col md:items-center md:justify-center">
+      <section className="w-full bg-white py-4 min-h-screen flex flex-col md:items-center md:justify-center">
         <div className="container mx-auto px-4 md:px-8 lg:px-16 text">
-          <div className="flex flex-col md:flex-row items-center">
-            <div className="md:w-1/2 mb-4 md:mb-0 lg:p-12 p-8 xl:ml-20">
-              <h2 className="text-4xl lg:text-6xl font-semibold mb-4">TRENDING REALTY</h2>
+          <div className="flex flex-col md:flex-row items-center space-x-4">
+            <div className="md:w-1/2 mb-4 md:mb-0 p-4 xl:ml-24">
+              <h2 className="text-6xl lg:text-8xl font-semibold mb-4">TRENDING REALTY</h2>
               <p className="mb-4">
                 Our latest collection of modernized homes boasts stunning 
                 aesthetics and unparalleled convenience. These highly sought-
@@ -101,13 +101,13 @@ const MidSection = () => {
                 </div>
               </div>
             </div>
-            <div className="md:w-1/2 lg:p-12 p-4 xl:mr-20">
+            <div className="md:w-1/2 p-4 xl:mr-20">
               <div className="space-y-4">
-                <div className="overflow-hidden transition-all duration-500 h-fit rounded-tl-4xl">
+                <div className="overflow-hidden transition-all duration-500 h-96 rounded-tl-4xl mb-8">
                   <img 
                     src={trendingImages[currentMainImage]}
                     alt="Trending property" 
-                    className="w-full h-auto object-cover transition-all duration-500"
+                    className="w-full h-full object-cover transition-all duration-500"
                   />
                 </div>
                 <div className="grid grid-cols-4 gap-2">
@@ -142,7 +142,7 @@ const MidSection = () => {
       <section className="w-full bg-[#822e27] text-white py-16 min-h-screen flex flex-col md:items-center md:justify-center">
         <div className="container mx-auto flex flex-col md:flex-row items-center">
           <div className="md:w-1/2 mb-8 md:mb-0 lg:p-28 md:p-12 p-8 xl:ml-20">
-            <h2 className="text-4xl lg:text-5xl font-semibold mb-8">BECOME A HOME OWNER TODAY</h2>
+            <h2 className="text-4xl lg:text-6xl font-semibold mb-8">BECOME A HOME OWNER TODAY</h2>
             <p className="mb-8">
               Own your dream home with AKH Realty today! Our modernized 
               homes are designed to match your style and enhance your 

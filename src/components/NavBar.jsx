@@ -37,7 +37,7 @@ const NavBar = ({
           <button onClick={toggleMenu}>
             <img src={menu} alt="hamburger menu" className="h-8 cursor-pointer"/>
           </button>
-          <div className="md:order-2 md:px-16">
+          <div className="md:order-2 md:px-16 cursor-pointer" onClick={()=>navigate('/')}>
             <img src={logo} alt="AKH Realty Logo" className="h-8 md:h-12"/>
           </div>
         </div>
@@ -45,7 +45,7 @@ const NavBar = ({
         {/* Logo */}
 
         {/*Desktop Menu - hidden on mobile */}
-        <nav className={`hidden md:flex md:order-1 md:justify-end md:space-x-8 ${textColor} font-medium`}>
+        <nav className={`hidden sticky md:flex md:order-1 md:justify-end md:space-x-8 ${textColor} font-medium`}>
           <div className="space-x-8 mt-2 flex cursor-pointer">
             <ul className="flex space-x-8 text-xl font-medium">
               {navItems.map((item) => (
@@ -54,7 +54,7 @@ const NavBar = ({
               ))}
             </ul>
           </div>
-          <div className="md:order-2 md:px-16">
+          <div className="md:order-2 md:px-16 cursor-pointer" onClick={()=>navigate('/')}>
             <img src={logo} alt="AKH Realty Logo" className="h-16 md:h-12"/>
           </div>
         </nav>

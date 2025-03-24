@@ -72,7 +72,7 @@ const SignUp = () => {
     <div className="flex flex-col md:flex-row mx-auto overflow-hidden min-h-screen">
       {/* Left section*/}
       <div className="bg-white p-8 lg:p-24 md:w-1/2 flex flex-col justify-center xl:ml-24">
-        <h1 className="text-4xl md:text-6xl font-semibold mb-6 text">SIGN UP</h1>
+        <h1 className="text-5xl md:text-8xl font-semibold mb-6 text">SIGN UP</h1>
         <p className="text mb-2 font-medium">
           Be the first to know about new homes with AKHCON Realty! Sign
           up for our waitlist to receive updates on stunning properties
@@ -83,7 +83,7 @@ const SignUp = () => {
       
       {/* Right section - Form */}
       <div className="bg-white p-12 lg:p-24 md:w-1/2 flex flex-col justify-center xl:mr-24">
-        <h2 className="text-2xl md:text-3xl font-semibold mb-6 text">Let's Find your dream home together</h2>
+        <h2 className="text-3xl md:text-4xl font-semibold mb-6 text">Let's Find your dream home together</h2>
         
         <form onSubmit={handleSubmit} className="flex flex-col space-y-4">
           <div>
@@ -126,7 +126,7 @@ const SignUp = () => {
           <div className="flex justify-end items-center pb-2 group cursor-pointer"
             onClick={handleSubmit}
             disabled={isSubmitting}>
-                <span className="mr-4 font-medium border-b-2 text-[#6ca2e3] border-[#6ca2e3] w-14 pb-1">SEND</span>
+                <span className="mr-4 font-medium border-b-2 text-[#6ca2e3] border-[#6ca2e3] w-20 pb-1">SIGN UP</span>
                 <div className="w-14 h-14 rounded-full bg-white flex items-center justify-center">
                   <img src={blueDirectArrow} alt="arrow-direction" />
                 </div>
