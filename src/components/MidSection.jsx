@@ -43,8 +43,8 @@ const MidSection = () => {
     <div className="w-full">
       {/* Virtual Reality Tour Section */}
       <section className="w-full background text-white py-12 min-h-screen flex flex-col md:items-center md:justify-center">
-        <div className="container mx-auto px-4 md:px-8 lg:px-16 flex flex-col md:flex-row items-center">
-          <div className="md:w-1/2 mb-4 md:mb-0 p-8 xl:ml-24">
+        <div className="container mx-auto px-16 flex flex-col md:flex-row items-center md:space-x-28 md:py-12">
+          <div className="md:w-1/3 mb-4 md:mb-0 xl:ml-20">
             <h2 className="text-4xl lg:text-6xl font-semibold mb-8">VIRTUAL REALITY TOUR</h2>
             <p className="mb-8">
               Step into the future of home buying with AKHI Realty! 
@@ -64,8 +64,8 @@ const MidSection = () => {
               </div>
             </div>
           </div>
-          <div className="md:w-1/2 p-4">
-            <div className="relative border-t-8 border-r-8 border-white ">
+          <div className="md:w-2/3 ">
+            <div className="relative border-t-12 border-r-12 border-white">
               <img 
                 src={virtualTourImg}
                 alt="Modern home virtual tour" 
@@ -84,10 +84,10 @@ const MidSection = () => {
       </section>
 
       {/* Trending Realty Section */}
-      <section className="w-full bg-white py-4 min-h-screen flex flex-col md:items-center md:justify-center">
-        <div className="container mx-auto px-4 md:px-8 lg:px-16 text">
-          <div className="flex flex-col md:flex-row items-center space-x-4">
-            <div className="md:w-1/2 mb-4 md:mb-0 p-4 xl:ml-24">
+      <section className="w-full bg-white py-8 min-h-screen flex flex-col md:items-center md:justify-center">
+        <div className="container mx-auto px-4 md:px-8 text">
+          <div className="flex flex-col md:flex-row items-center md:space-x-28 md:py-12">
+            <div className="md:w-1/3 mb-4 md:mb-0 p-4 xl:ml-24">
               <h2 className="text-6xl lg:text-8xl font-semibold mb-4">TRENDING REALTY</h2>
               <p className="mb-4">
                 Our latest collection of modernized homes boasts stunning 
@@ -101,9 +101,9 @@ const MidSection = () => {
                 </div>
               </div>
             </div>
-            <div className="md:w-1/2 p-4 xl:mr-20">
+            <div className="md:w-2/3 p-4 xl:mr-20">
               <div className="space-y-4">
-                <div className="overflow-hidden transition-all duration-500 h-96 rounded-tl-4xl mb-8">
+                <div className="overflow-hidden transition-all duration-500 w-full h-full md:h-136 rounded-tl-4xl mb-8">
                   <img 
                     src={trendingImages[currentMainImage]}
                     alt="Trending property" 
@@ -140,8 +140,8 @@ const MidSection = () => {
 
       {/* Become a Home Owner Section */}
       <section className="w-full bg-[#822e27] text-white py-16 min-h-screen flex flex-col md:items-center md:justify-center">
-        <div className="container mx-auto flex flex-col md:flex-row items-center">
-          <div className="md:w-1/2 mb-8 md:mb-0 lg:p-28 md:p-12 p-8 xl:ml-20">
+        <div className="container mx-auto flex flex-col md:flex-row items-center md:space-x-28 md:py-12">
+          <div className="md:w-1/3 mb-8 md:mb-0 p-12 xl:ml-24">
             <h2 className="text-4xl lg:text-6xl font-semibold mb-8">BECOME A HOME OWNER TODAY</h2>
             <p className="mb-8">
               Own your dream home with AKH Realty today! Our modernized 
@@ -156,7 +156,7 @@ const MidSection = () => {
               </div>
             </div>
           </div>
-          <div className="md:w-1/2 pl-2">
+          <div className="md:w-2/3 pl-2">
             <img 
               src={homeOwner}
               alt="Real estate agent with new homeowners" 

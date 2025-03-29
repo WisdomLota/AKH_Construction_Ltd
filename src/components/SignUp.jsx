@@ -71,7 +71,7 @@ const SignUp = () => {
   return (
     <div className="flex flex-col md:flex-row mx-auto overflow-hidden min-h-screen">
       {/* Left section*/}
-      <div className="bg-white p-8 lg:p-24 md:w-1/2 flex flex-col justify-center xl:ml-24">
+      <div className="bg-white p-8 lg:p-24 md:w-1/2 flex flex-col justify-center xl:ml-16">
         <h1 className="text-5xl md:text-8xl font-semibold mb-6 text">SIGN UP</h1>
         <p className="text mb-2 font-medium">
           Be the first to know about new homes with AKHCON Realty! Sign
