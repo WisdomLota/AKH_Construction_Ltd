@@ -70,7 +70,7 @@ const ContactForm = ({
     <div className={`flex flex-col md:flex-row w-full mx-auto lg:p-24 p-8 ${bgColor} ${textColor} min-h-screen md:items-center md:justify-center`}>
       {/* Left section */}
       <div className="md:w-1/2 mb-8 md:mb-0 flex items-center">
-        <h1 className="text-4xl md:text-5xl font-semibold leading-tight xl:ml-24 xl:p-0 p-4">
+        <h1 className="text-4xl md:text-5xl font-semibold leading-tight xl:ml-28 xl:p-0 p-4">
           STILL HAVE MORE QUESTIONS FOR US?
         </h1>
       </div>

@@ -61,7 +61,7 @@ const FAQ = () => {
   };
 
   return (
-    <div className="w-full py-8 px-4 md:px-8 bg-white">
+    <div className="w-full py-8 px-4 md:px-12 bg-white">
       <div className="mx-auto lg:p-20 p-8 xl:ml-20">
         <h2 className="text-6xl md:text-8xl font-semibold text-[#8B2A23] lg:mb-1 mb-8">
           Frequently
