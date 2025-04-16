@@ -117,15 +117,15 @@ const PropertyDetail = () => {
                   <div className="items-center">
                     <p className='text-center font-semibold'>Bedrooms</p>
                     <div className='flex justify-between'>
-                        <img src={bedIcon} alt="bed-icon" />
+                        <img src={bedIcon} alt="bed-icon"/>
                         <span>{property.bedrooms}</span>
                     </div>
                   </div>
                   
                   <div className="items-center">
                     <p className='text-center font-semibold'>Size</p>
-                    <div className='flex justify-between'>
-                        <img src={size} alt="size-icon" />
+                    <div className='flex flex-col justify-between'>
+                        <img src={size} alt="size-icon" className='w-8 h-8 mx-auto'/>
                         <span>{property.size}</span>
                     </div>
                   </div>

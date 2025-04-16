@@ -25,11 +25,11 @@ const RealtyCard = ({ property }) => {
         />
       </div>
       
-      <div className="px-8 py-8 space-y-8">
+      <div className="px-4 md:px-8 py-8 space-y-8">
         <h3 className="text-2xl font-bold">{property.title}</h3>
         
         <div className="flex justify-between my-4 mb-8">
-          <div className="items-center">
+          <div className="items-center space-y-2">
             <p className='text-center font-semibold'>Bedrooms</p>
             <div className='flex justify-between'>
                 <img src={bedIcon} alt="bed-icon" />
@@ -37,15 +37,15 @@ const RealtyCard = ({ property }) => {
             </div>
           </div>
           
-          <div className="items-center">
+          <div className="items-center space-y-2">
             <p className='text-center font-semibold'>Size</p>
-            <div className='flex justify-between'>
-                <img src={size} alt="size-icon" />
+            <div className='flex flex-col justify-between space-y-2'>
+                <img src={size} alt="size-icon" className='w-8 h-8 mx-auto'/>
                 <span>{property.size}</span>
             </div>
           </div>
           
-          <div className="items-center">
+          <div className="items-center space-y-2">
             <p className='text-center font-semibold'>Bathrooms</p>
             <div className='flex justify-between'>
                 <img src={bathIcon} alt="bath-icon" />

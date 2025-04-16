@@ -3,12 +3,12 @@ import defaultArrow from '../assets/blueDirectArrow.svg';
 
 
 const ContactForm = ({
-  bgColor = 'bg-white', 
-  textColor = 'text-[#822e27]', 
+  bgColor = 'bg-white',
+  textColor = 'text-[#822e27]',
   bordersColor = 'border-[#822e27]',
   arrow = defaultArrow,
   btnLine = 'border-[#6ca2e3]',
-  btnText = 'text-[#6ca2e3]'}) => {
+  btnText = 'text-[#6ca2e3]' }) => {
 
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
@@ -24,14 +24,14 @@ const ContactForm = ({
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    
+
     // Reset errors
     setEmailError('');
     setMessageError('');
-    
+
     // Validate inputs
     let isValid = true;
-    
+
     if (!email) {
       setEmailError('Email address is required');
       isValid = false;
@@ -39,15 +39,15 @@ const ContactForm = ({
       setEmailError('Please enter a valid email address');
       isValid = false;
     }
-    
+
     if (!message) {
       setMessageError('Message is required');
       isValid = false;
     }
-    
+
     if (isValid) {
       setIsSubmitting(true);
-      
+
       // Simulate form submission
       setTimeout(() => {
         setIsSubmitting(false);
@@ -56,7 +56,7 @@ const ContactForm = ({
         // console.log('Message:', message);
         setEmail('');
         setMessage('');
-        
+
         // Reset success message after 3 seconds
         setTimeout(() => {
           setIsSubmitted(false);
@@ -104,15 +104,15 @@ const ContactForm = ({
               {messageError && <p className="mt-1 text-red-500 text-sm">{messageError}</p>}
             </div>
 
-              {/* Submit button */}
-              <div className="flex justify-end items-center pb-2 group cursor-pointer"
+            {/* Submit button */}
+            <div className="flex justify-end items-center pb-2 group cursor-pointer"
               onClick={handleSubmit}
               disabled={isSubmitting}>
-                  <span className={`mr-4 font-medium border-b-2 w-14 pb-1 ${btnLine} ${btnText}`}>SEND</span>
-                  <div className="w-14 h-14 rounded-full bg-white flex items-center justify-center">
-                    <img src={arrow} alt="arrow-direction" />
-                  </div>
+              <span className={`mr-4 font-medium border-b-2 w-14 pb-1 ${btnLine} ${btnText}`}>SEND</span>
+              <div className="w-14 h-14 rounded-full bg-white flex items-center justify-center">
+                <img src={arrow} alt="arrow-direction" />
               </div>
+            </div>
 
             {isSubmitted && (
               <div className="mt-4 p-3 bg-green-100 text-green-800 rounded-bl-4xl">
@@ -122,7 +122,7 @@ const ContactForm = ({
           </form>
         </div>
 
-        
+
       </div>
     </div>
   );
