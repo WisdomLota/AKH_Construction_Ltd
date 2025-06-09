@@ -7,5 +7,9 @@
 }
 
 .border-bottom-left-rounded {
-    border-bottom-left-radius: 64px;
+    border-bottom-left-radius: 32px;
+}
+
+.border-top-left-rounded {
+    border-top-left-radius: 32px;
 }

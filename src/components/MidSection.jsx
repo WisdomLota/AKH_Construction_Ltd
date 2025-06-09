@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import DevUpdates from './DevUpdates.jsx';
 import virtualTourImg from '../assets/virtualTourImg.png';
 import directArrow from '../assets/directArrow.svg';
 import blueDirectArrow from '../assets/blueDirectArrow.svg';
@@ -7,6 +8,7 @@ import trendingRealtyImg2 from '../assets/trendingRealtyImg2.png';
 import trendingRealtyImg3 from '../assets/trendingRealtyImg3.png';
 import trendingRealtyImg4 from '../assets/trendingRealtyImg4.png';
 import trendingRealtyImg5 from '../assets/trendingRealtyImg5.png';
+import comingSoonImg from '../assets/comingSoonImg.png';
 import homeOwner from '../assets/homeOwner.png';
 import { useNavigate } from 'react-router-dom';
 
@@ -21,19 +23,27 @@ const MidSection = () => {
     trendingRealtyImg4,
     trendingRealtyImg5
   ];
+
+  // Array of all coming soon images
+  const comingSoonImages = [
+    comingSoonImg,
+    trendingRealtyImg5,
+    trendingRealtyImg4,
+    trendingRealtyImg3,
+    trendingRealtyImg2
+  ];
   
   // State to track the currently displayed main image
   const [currentMainImage, setCurrentMainImage] = useState(0);
   
-  // UseEffect for automatic image rotation
+  // UseEffect for automatic image rotation for TrendingRealty and ComingSoon sections
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentMainImage((prev) => (prev + 1) % trendingImages.length);
-    }, 5000); // Change image every 3 seconds
-    
+    }, 5000);
     return () => clearInterval(interval);
   }, [trendingImages.length]);
-  
+
   // Handle manual image selection
   const handleImageClick = (index) => {
     setCurrentMainImage(index);
@@ -137,6 +147,66 @@ const MidSection = () => {
           </div>
         </div>
       </section>
+
+      {/* Development Updates Section */}
+      <DevUpdates />
+
+
+      {/* Coming Soon Section */}
+      <section className="w-full bg-white py-8 min-h-screen flex flex-col md:items-center md:justify-center">
+        <div className="container mx-auto px-4 md:px-8 text">
+          <div className="flex flex-col md:flex-row items-center md:space-x-24 md:py-12">
+            <div className="md:w-1/3 mb-4 md:mb-0 p-4 xl:ml-12">
+              <h2 className="text-6xl lg:text-8xl font-semibold mb-4">COMING SOON!!!</h2>
+              <p className="mb-4">
+                Exciting news! A brand-new addition to our real estate portfolio is on the horizon, bringing contemporary design and effortless luxury. 
+                Demand is already building, so stay ahead and secure your dream home before it's too late!
+              </p>
+              <div className="hidden md:inline-flex items-center pb-2 group cursor-pointer text-[#6ca2e3]" onClick={()=>navigate('/realty')}>
+                <span className="mr-4 font-medium border-b-2 border-[#6ca2e3] w-36 pb-1">EXPLORE REALTY</span>
+                <div className="w-14 h-14 rounded-full bg-white flex items-center justify-center">
+                    <img src={blueDirectArrow} alt="arrow-direction" className="w-full"/>
+                </div>
+              </div>
+            </div>
+            <div className="md:w-2/3 p-4 xl:mr-8 md:ml-12">
+              <div className="space-y-4">
+                <div className="overflow-hidden transition-all duration-500 w-full h-full md:h-120 rounded-tl-4xl mb-8">
+                  <img 
+                    src={comingSoonImages[currentMainImage]}
+                    alt="Trending property" 
+                    className="w-full h-full object-cover transition-all duration-500"
+                  />
+                </div>
+                <div className="grid grid-cols-4 gap-2">
+                  {comingSoonImages.slice(1).map((img, index) => (
+                    <div 
+                      key={index} 
+                      className={`cursor-pointer overflow-hidden ${currentMainImage === index+1 ? 'ring-2 ring-[#6ca2e3]' : ''}`}
+                      onClick={() => handleImageClick(index)}
+                    >
+                      <img 
+                        src={img}
+                        alt={`Property detail ${index + 1}`} 
+                        className="w-full h-auto object-cover transition-all hover:scale-105 duration-300"
+                      />
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        {/*Mobile view only */}
+        <div className="flex md:hidden justify-end items-center px-8 py-2 mt-2 group cursor-pointer text-[#6ca2e3]" onClick={()=>navigate('/realty')}>
+          <span className="mr-4 font-medium border-b-2 border-[#6ca2e3] w-36 pb-1" >EXPLORE REALTY</span>
+          <div className="w-12 h-12 rounded-full bg-white flex items-center justify-center">
+              <img src={blueDirectArrow} alt="arrow-direction" className="w-full"/>
+          </div>
+        </div>
+      </section>
+
+
 
       {/* Become a Home Owner Section */}
       <section className="w-full bg-[#822e27] text-white py-16 min-h-screen flex flex-col md:items-center md:justify-center">
