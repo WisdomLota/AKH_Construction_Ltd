@@ -109,7 +109,7 @@ const PropertyDetail = () => {
                 <div className="flex justify-between items-start pt-2">
                   <h3 className="text-lg font-semibold">Overview</h3>
                   <div className="bg-[#822e27] text-white text-sm py-2 px-6 rounded-bl-3xl">
-                    {property.unitsLeft} units left
+                    {property.unitsLeft} unit(s) left
                   </div>
                 </div>
               
