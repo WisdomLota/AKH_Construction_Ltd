@@ -4,11 +4,11 @@ const About = () => {
             {/* About Section */}
             <section className="py-20 lg:px-20 px-4 text">
               <div className="container mx-auto px-4">
-                <div className="flex flex-col md:flex-row justify-around h-fit">
-                  <div className="w-full md:w-1/2 flex md:items-center md:justify-start mb-4">
-                    <h1 className="text-6xl md:text-8xl font-semibold">ABOUT</h1>
+                <div className="flex flex-col lg:flex-row justify-around h-fit">
+                  <div className="w-full lg:w-1/2 flex lg:items-center lg:justify-start mb-4">
+                    <h1 className="text-6xl lg:text-8xl font-semibold">ABOUT</h1>
                   </div>
-                  <div className="w-full md:w-1/2">
+                  <div className="w-full lg:w-1/2">
                     <div className="max-w-4xl space-y-12 font-medium">
                       <p>
                         At AKHCON Realty, we pride ourselves on offering a seamless blend of 

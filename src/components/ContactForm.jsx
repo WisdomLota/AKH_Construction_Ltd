@@ -67,18 +67,18 @@ const ContactForm = ({
   };
 
   return (
-    <div className={`flex flex-col md:flex-row w-full mx-auto lg:p-24 p-8 ${bgColor} ${textColor} min-h-screen md:items-center md:justify-center`}>
+    <div className={`flex flex-col lg:flex-row w-full mx-auto lg:p-24 p-8 ${bgColor} ${textColor} min-h-screen lg:items-center lg:justify-center`}>
       {/* Left section */}
-      <div className="md:w-1/2 mb-8 md:mb-0 flex items-center">
-        <h1 className="text-4xl md:text-5xl font-semibold leading-tight xl:ml-28 xl:p-0 p-4">
+      <div className="lg:w-1/2 mb-8 lg:mb-0 flex items-center">
+        <h1 className="text-4xl lg:text-5xl font-semibold leading-tight xl:ml-28 xl:p-0 p-4">
           STILL HAVE MORE QUESTIONS FOR US?
         </h1>
       </div>
 
       {/* Right section */}
-      <div className="md:w-1/2 md:flex md:flex-row justify-center items-center p-4">
+      <div className="lg:w-1/2 lg:flex lg:flex-row justify-center items-center p-4">
         <div className="mb-6">
-          <h2 className="text-3xl md:text-3xl font-medium mb-8">
+          <h2 className="text-3xl lg:text-3xl font-medium mb-8">
             Feel Free to send us a message
           </h2>
           <form onSubmit={handleSubmit}>

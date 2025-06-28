@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import blueDirectArrow from '../assets/blueDirectArrow.svg';
 const SignUp = () => {
-  const [formData, setFormData] = useState({
+  const [forlgata, setForlgata] = useState({
     fullName: '',
     mobileNumber: '',
     emailAddress: ''
@@ -14,19 +14,19 @@ const SignUp = () => {
   const validate = () => {
     const newErrors = {};
     
-    if (!formData.fullName.trim()) {
+    if (!forlgata.fullName.trim()) {
       newErrors.fullName = 'Full name is required';
     }
     
-    if (!formData.mobileNumber.trim()) {
+    if (!forlgata.mobileNumber.trim()) {
       newErrors.mobileNumber = 'Mobile number is required';
-    } else if (!/^\+?[0-9\s\-()]{8,20}$/.test(formData.mobileNumber)) {
+    } else if (!/^\+?[0-9\s\-()]{8,20}$/.test(forlgata.mobileNumber)) {
         newErrors.mobileNumber = 'Please enter a valid mobile number';
     }
     
-    if (!formData.emailAddress.trim()) {
+    if (!forlgata.emailAddress.trim()) {
       newErrors.emailAddress = 'Email address is required';
-    } else if (!/\S+@\S+\.\S+/.test(formData.emailAddress)) {
+    } else if (!/\S+@\S+\.\S+/.test(forlgata.emailAddress)) {
       newErrors.emailAddress = 'Please enter a valid email address';
     }
     
@@ -36,8 +36,8 @@ const SignUp = () => {
   
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData({
-      ...formData,
+    setForlgata({
+      ...forlgata,
       [name]: value
     });
   };
@@ -48,11 +48,11 @@ const SignUp = () => {
     
     if (validate()) {
       //send the data to your backend here
-      console.log('Form submitted successfully', formData);
+      console.log('Form submitted successfully', forlgata);
       setTimeout(() => {
         setIsSubmitting(false);
         setIsSubmitted(true);
-        setFormData({
+        setForlgata({
           fullName: '',
           mobileNumber: '',
           emailAddress: ''
@@ -69,10 +69,10 @@ const SignUp = () => {
   };
   
   return (
-    <div className="flex flex-col md:flex-row mx-auto overflow-hidden min-h-screen">
+    <div className="flex flex-col lg:flex-row mx-auto overflow-hidden min-h-screen">
       {/* Left section*/}
-      <div className="bg-white p-8 lg:p-24 md:w-1/2 flex flex-col justify-center xl:ml-24">
-        <h1 className="text-5xl md:text-8xl font-semibold mb-6 text">SIGN UP</h1>
+      <div className="bg-white p-12 lg:p-24 lg:w-1/2 flex flex-col justify-center xl:ml-24">
+        <h1 className="text-5xl lg:text-8xl font-semibold mb-6 text">SIGN UP</h1>
         <p className="text mb-2 font-medium">
           Be the first to know about new homes with AKHCON Realty! Sign
           up for our waitlist to receive updates on stunning properties
@@ -82,15 +82,15 @@ const SignUp = () => {
       </div>
       
       {/* Right section - Form */}
-      <div className="bg-white p-12 lg:p-24 md:w-1/2 flex flex-col justify-center xl:mr-24">
-        <h2 className="text-3xl md:text-4xl font-semibold mb-6 text">Let's Find your dream home together</h2>
+      <div className="bg-white p-12 lg:p-24 lg:w-1/2 flex flex-col justify-center xl:mr-24">
+        <h2 className="text-3xl lg:text-4xl font-semibold mb-6 text">Let's Find your dream home together</h2>
         
         <form onSubmit={handleSubmit} className="flex flex-col space-y-4">
           <div>
             <input
               type="text"
               name="fullName"
-              value={formData.fullName}
+              value={forlgata.fullName}
               onChange={handleChange}
               placeholder="Full Name"
               className={`w-full p-4 border rounded-bl-4xl text font-medium ${errors.fullName ? 'border-red-500' : 'border-[#822e27]'}`}
@@ -102,7 +102,7 @@ const SignUp = () => {
             <input
               type="tel"
               name="mobileNumber"
-              value={formData.mobileNumber}
+              value={forlgata.mobileNumber}
               onChange={handleChange}
               placeholder="Mobile Number"
               className={`w-full p-4 border rounded-bl-4xl text font-medium ${errors.mobileNumber ? 'border-red-500' : 'border-[#822e27]'}`}
@@ -114,7 +114,7 @@ const SignUp = () => {
             <input
               type="email"
               name="emailAddress"
-              value={formData.emailAddress}
+              value={forlgata.emailAddress}
               onChange={handleChange}
               placeholder="Email Address"
               className={`w-full p-4 border rounded-bl-4xl text font-medium ${errors.emailAddress ? 'border-red-500' : 'border-[#822e27]'}`}

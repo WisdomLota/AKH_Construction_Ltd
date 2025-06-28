@@ -52,9 +52,9 @@ const MidSection = () => {
   return (
     <div className="w-full">
       {/* Virtual Reality Tour Section */}
-      <section className="w-full background text-white py-12 min-h-screen flex flex-col md:items-center md:justify-center">
-        <div className="container mx-auto px-16 flex flex-col md:flex-row items-center md:space-x-28 md:py-12">
-          <div className="md:w-1/3 mb-4 md:mb-0 xl:ml-8">
+      <section className="w-full background text-white py-12 min-h-screen flex flex-col lg:items-center lg:justify-center">
+        <div className="px-8 lg:px-16 flex flex-col lg:flex-row items-center lg:space-x-28 lg:py-12">
+          <div className="lg:w-1/3 mb-4 lg:mb-0 xl:ml-8">
             <h2 className="text-4xl lg:text-6xl font-semibold mb-8">VIRTUAL REALITY TOUR</h2>
             <p className="mb-8">
               Step into the future of home buying with AKHI Realty! 
@@ -67,25 +67,25 @@ const MidSection = () => {
               giving you a feel for the beauty and aesthetics we proudly offer—
               without any hassle.
             </p>
-            <div className="hidden md:inline-flex items-center pb-2 group cursor-pointer" onClick={()=>navigate('/realty')}>
+            <div className="hidden lg:inline-flex items-center pb-2 group cursor-pointer" onClick={()=>navigate('/realty')}>
               <span className="mr-4 font-medium border-b-2 border-white w-28 pb-1" >EXPLORE VR</span>
               <div className="w-14 h-14 rounded-full bg-white flex items-center justify-center">
                 <img src={directArrow} alt="arrow-direction" className="w-full"/>
               </div>
             </div>
           </div>
-          <div className="md:w-2/3 ">
+          <div className="lg:w-2/3 ">
             <div className="relative border-t-12 border-r-12 border-white">
               <img 
                 src={virtualTourImg}
                 alt="Modern home virtual tour" 
-                className="w-full h-auto object-cover rounded-md relative z-10"
+                className="w-full h-auto object-cover rounded-lg relative z-10"
               />
             </div>
           </div>  
         </div>
         {/*Mobile view only */}
-        <div className="md:hidden flex justify-end items-center px-8 py-2 group cursor-pointer mt-2" onClick={()=>navigate('/realty')}>
+        <div className="lg:hidden flex justify-end items-center px-8 py-2 group cursor-pointer mt-2" onClick={()=>navigate('/realty')}>
             <span className="mr-4 font-medium border-b-2 border-white w-28 pb-1" >EXPLORE VR</span>
             <div className="w-12 h-12 rounded-full bg-white flex items-center justify-center">
               <img src={directArrow} alt="arrow-direction" className="w-full"/>
@@ -94,30 +94,30 @@ const MidSection = () => {
       </section>
 
       {/* Trending Realty Section */}
-      <section className="w-full bg-white py-8 min-h-screen flex flex-col md:items-center md:justify-center">
-        <div className="container mx-auto px-4 md:px-8 text">
-          <div className="flex flex-col md:flex-row items-center md:space-x-24 md:py-12">
-            <div className="md:w-1/3 mb-4 md:mb-0 p-4 xl:ml-12">
-              <h2 className="text-6xl lg:text-8xl font-semibold mb-4">TRENDING REALTY</h2>
+      <section className="w-full bg-white py-8 min-h-screen flex flex-col lg:items-center lg:justify-center">
+        <div className="px-4 lg:px-8 text">
+          <div className="flex flex-col lg:flex-row items-center lg:space-x-24 lg:py-12">
+            <div className="lg:w-1/3 mb-4 lg:mb-0 p-4 xl:ml-12">
+              <h2 className="text-6xl xl:text-8xl font-semibold mb-4">TRENDING REALTY</h2>
               <p className="mb-4">
                 Our latest collection of modernized homes boasts stunning 
                 aesthetics and unparalleled convenience. These highly sought-
                 after units are selling fast, and you won't want to miss out.
               </p>
-              <div className="hidden md:inline-flex items-center pb-2 group cursor-pointer text-[#6ca2e3]" onClick={()=>navigate('/realty')}>
+              <div className="hidden lg:inline-flex items-center pb-2 group cursor-pointer text-[#6ca2e3]" onClick={()=>navigate('/realty')}>
                 <span className="mr-4 font-medium border-b-2 border-[#6ca2e3] w-36 pb-1">EXPLORE REALTY</span>
                 <div className="w-14 h-14 rounded-full bg-white flex items-center justify-center">
                     <img src={blueDirectArrow} alt="arrow-direction" className="w-full"/>
                 </div>
               </div>
             </div>
-            <div className="md:w-2/3 p-4 xl:mr-8 md:ml-12">
+            <div className="lg:w-2/3 p-4 xl:mr-8 lg:ml-12">
               <div className="space-y-4">
-                <div className="overflow-hidden transition-all duration-500 w-full h-full md:h-120 rounded-tl-4xl mb-8">
+                <div className="overflow-hidden transition-all duration-500 w-full h-full lg:h-120 rounded-tl-4xl mb-8">
                   <img 
                     src={trendingImages[currentMainImage]}
                     alt="Trending property" 
-                    className="w-full h-full object-cover transition-all duration-500"
+                    className="w-full h-full  object-cover transition-all duration-500"
                   />
                 </div>
                 <div className="grid grid-cols-4 gap-2">
@@ -140,7 +140,7 @@ const MidSection = () => {
           </div>
         </div>
         {/*Mobile view only */}
-        <div className="flex md:hidden justify-end items-center px-8 py-2 mt-2 group cursor-pointer text-[#6ca2e3]" onClick={()=>navigate('/realty')}>
+        <div className="flex lg:hidden justify-end items-center px-8 py-2 mt-2 group cursor-pointer text-[#6ca2e3]" onClick={()=>navigate('/realty')}>
           <span className="mr-4 font-medium border-b-2 border-[#6ca2e3] w-36 pb-1" >EXPLORE REALTY</span>
           <div className="w-12 h-12 rounded-full bg-white flex items-center justify-center">
               <img src={blueDirectArrow} alt="arrow-direction" className="w-full"/>
@@ -153,25 +153,25 @@ const MidSection = () => {
 
 
       {/* Coming Soon Section */}
-      <section className="w-full bg-white py-8 min-h-screen flex flex-col md:items-center md:justify-center">
-        <div className="container mx-auto px-4 md:px-8 text">
-          <div className="flex flex-col md:flex-row items-center md:space-x-24 md:py-12">
-            <div className="md:w-1/3 mb-4 md:mb-0 p-4 xl:ml-12">
-              <h2 className="text-6xl lg:text-8xl font-semibold mb-4">COMING SOON!!!</h2>
+      <section className="w-full bg-white py-8 min-h-screen flex flex-col lg:items-center lg:justify-center">
+        <div className="px-4 lg:px-8 text">
+          <div className="flex flex-col lg:flex-row items-center lg:space-x-24 lg:py-12">
+            <div className="lg:w-1/3 mb-4 lg:mb-0 p-4 xl:ml-12">
+              <h2 className="text-6xl xl:text-8xl font-semibold mb-4">COMING SOON!!!</h2>
               <p className="mb-4">
                 Exciting news! A brand-new addition to our real estate portfolio is on the horizon, bringing contemporary design and effortless luxury. 
                 Demand is already building, so stay ahead and secure your dream home before it's too late!
               </p>
-              <div className="hidden md:inline-flex items-center pb-2 group cursor-pointer text-[#6ca2e3]" onClick={()=>navigate('/realty')}>
+              <div className="hidden lg:inline-flex items-center pb-2 group cursor-pointer text-[#6ca2e3]" onClick={()=>navigate('/realty')}>
                 <span className="mr-4 font-medium border-b-2 border-[#6ca2e3] w-36 pb-1">EXPLORE REALTY</span>
                 <div className="w-14 h-14 rounded-full bg-white flex items-center justify-center">
                     <img src={blueDirectArrow} alt="arrow-direction" className="w-full"/>
                 </div>
               </div>
             </div>
-            <div className="md:w-2/3 p-4 xl:mr-8 md:ml-12">
+            <div className="lg:w-2/3 p-4 xl:mr-8 lg:ml-12">
               <div className="space-y-4">
-                <div className="overflow-hidden transition-all duration-500 w-full h-full md:h-120 rounded-tl-4xl mb-8">
+                <div className="overflow-hidden transition-all duration-500 w-full h-full lg:h-120 rounded-tl-4xl mb-8">
                   <img 
                     src={comingSoonImages[currentMainImage]}
                     alt="Trending property" 
@@ -198,7 +198,7 @@ const MidSection = () => {
           </div>
         </div>
         {/*Mobile view only */}
-        <div className="flex md:hidden justify-end items-center px-8 py-2 mt-2 group cursor-pointer text-[#6ca2e3]" onClick={()=>navigate('/realty')}>
+        <div className="flex lg:hidden justify-end items-center px-8 py-2 mt-2 group cursor-pointer text-[#6ca2e3]" onClick={()=>navigate('/realty')}>
           <span className="mr-4 font-medium border-b-2 border-[#6ca2e3] w-36 pb-1" >EXPLORE REALTY</span>
           <div className="w-12 h-12 rounded-full bg-white flex items-center justify-center">
               <img src={blueDirectArrow} alt="arrow-direction" className="w-full"/>
@@ -209,9 +209,9 @@ const MidSection = () => {
 
 
       {/* Become a Home Owner Section */}
-      <section className="w-full bg-[#822e27] text-white py-16 min-h-screen flex flex-col md:items-center md:justify-center">
-        <div className="container mx-auto flex flex-col md:flex-row items-center md:space-x-24 md:py-12">
-          <div className="md:w-1/3 mb-8 md:mb-0 p-12 xl:ml-12">
+      <section className="w-full bg-[#822e27] text-white py-16 min-h-screen flex flex-col lg:items-center lg:justify-center">
+        <div className="container mx-auto flex flex-col lg:flex-row items-center lg:space-x-24 lg:py-12">
+          <div className="lg:w-1/3 mb-8 lg:mb-0 p-12 xl:ml-12">
             <h2 className="text-4xl lg:text-6xl font-semibold mb-8">BECOME A HOME OWNER TODAY</h2>
             <p className="mb-8">
               Own your dream home with AKH Realty today! Our modernized 
@@ -219,14 +219,14 @@ const MidSection = () => {
               lifestyle. With a seamless online process, owning a home has 
               never been easier. Don't miss out—become a homeowner today!
             </p>
-            <div className="hidden md:inline-flex items-center pb-2 group cursor-pointer" onClick={()=>navigate('/realty')}>
+            <div className="hidden lg:inline-flex items-center pb-2 group cursor-pointer" onClick={()=>navigate('/realty')}>
               <span className="mr-4 font-medium border-b-2 border-white w-36 pb-1" >EXPLORE REALTY</span>
               <div className="w-14 h-14 rounded-full bg-white flex items-center justify-center">
                 <img src={directArrow} alt="arrow-direction" className="w-full"/>
               </div>
             </div>
           </div>
-          <div className="md:w-2/3 pl-2">
+          <div className="lg:w-2/3 pl-2">
             <img 
               src={homeOwner}
               alt="Real estate agent with new homeowners" 
@@ -235,7 +235,7 @@ const MidSection = () => {
           </div>
         </div>
         {/*Mobile view only */}
-        <div className="md:hidden flex justify-end items-center px-8 py-2 group cursor-pointer mt-2" onClick={()=>navigate('/realty')}>
+        <div className="lg:hidden flex justify-end items-center px-8 py-2 group cursor-pointer mt-2" onClick={()=>navigate('/realty')}>
           <span className="mr-4 font-medium border-b-2 border-white w-36 pb-1" >EXPLORE REALTY</span>
           <div className="w-12 h-12 rounded-full bg-white flex items-center justify-center">
             <img src={directArrow} alt="arrow-direction" className="w-full"/>

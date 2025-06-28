@@ -7,6 +7,7 @@ import Contact from './pages/Contact'
 import AboutPage from './pages/AboutPage'
 import RealtyPage from './pages/RealtyPage'
 import PropertyDetail from './components/PropertyDetail'
+import DevUpdatesPage from './pages/DevUpdatesPage'
 import {properties} from "./data/propertiesData"
 import './styles/App.css'
 
@@ -28,6 +29,7 @@ function App() {
             <Route path='/privacy-policy' element={<PrivacyPolicy/>}/>
             <Route path='/contact' element={<Contact/>}/>
             <Route path='/about' element={<AboutPage/>}/>
+            <Route path='/dev-updates' element={<DevUpdatesPage/>}/>
             
             {/* routes for property pages */}
             <Route path='/realty' element={<RealtyPage/>}/>

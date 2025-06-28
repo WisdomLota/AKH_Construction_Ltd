@@ -33,24 +33,24 @@ const DevUpdates = () => {
   return (
     <div>
       {/* Development Updates Section */}
-      <section className="w-full bg-[#822e27] text-white min-h-screen flex flex-col md:items-center md:justify-center">
+      <section className="w-full bg-[#822e27] text-white min-h-screen flex flex-col lg:items-center lg:justify-center">
         
         {/* Desktop Layout */}
-        <div className="hidden md:flex container mx-auto flex-col md:flex-row items-center md:space-x-24">
-          <div className="md:w-1/3 mb-8 md:mb-0 p-12 xl:ml-12">
-            <h2 className="text-4xl lg:text-6xl font-semibold mb-8">DEVELOPMENT UPDATES</h2>
+        <div className="hidden lg:flex flex-col lg:flex-row items-center lg:space-x-24">
+          <div className="lg:w-1/3 mb-8 lg:mb-0 p-12 xl:ml-12">
+            <h2 className="text-4xl lg:text-5xl xl:text-6xl font-semibold mb-8">DEVELOPMENT UPDATES</h2>
             <p className="mb-8">
               Formwork to roof slab is ongoing to be completed next week. Reinforcement to roof slab also commenced to be completed next week as well. 
               Electrical and mechanical piping to commence next week. Scaffolding in place for the commencement of finishes
             </p>
-            <div className="inline-flex items-center pb-2 group cursor-pointer" onClick={()=>navigate('/realty')}>
+            <div className="inline-flex items-center pb-2 group cursor-pointer" onClick={()=>navigate('/dev-updates')}>
               <span className="mr-4 font-medium border-b-2 border-white w-24 pb-1" >SEE MORE</span>
               <div className="w-14 h-14 rounded-full bg-white flex items-center justify-center">
                 <img src={directArrow} alt="arrow-direction" className="w-full"/>
               </div>
             </div>
           </div>
-          <div className="md:w-2/3 pl-2">
+          <div className="lg:w-2/3 pl-2">
             <div>
               <img 
                 src={devUpdateImages[currentDevUpdateImage]}
@@ -68,7 +68,7 @@ const DevUpdates = () => {
                   <img 
                     src={img}
                     alt={`Property detail ${index + 1}`} 
-                    className="w-full md:h-80 object-cover transition-all hover:scale-105 duration-300 border-top-left-rounded"
+                    className="w-full lg:h-80 object-cover transition-all hover:scale-105 duration-300 border-top-left-rounded"
                   />
                 </div>
               ))}
@@ -77,7 +77,7 @@ const DevUpdates = () => {
         </div>
 
         {/* Mobile Layout */}
-        <div className="md:hidden flex flex-col w-full">
+        <div className="lg:hidden flex flex-col w-full">
           {/* Main Image at Top */}
           <div className="px-6 pb-8">
             <img 
@@ -116,7 +116,7 @@ const DevUpdates = () => {
           </div>
 
           {/* SEE MORE Button at Bottom Center */}
-          <div className="flex justify-end items-center pb-8 group cursor-pointer px-6" onClick={()=>navigate('/realty')}>
+          <div className="flex justify-end items-center pb-8 group cursor-pointer px-6" onClick={()=>navigate('/dev-updates')}>
             <span className="mr-4 font-medium border-b-2 border-white w-20 pb-1 text-sm">SEE MORE</span>
             <div className="w-12 h-12 rounded-full bg-white flex items-center justify-center">
               <img src={directArrow} alt="arrow-direction" className="w-10"/>
