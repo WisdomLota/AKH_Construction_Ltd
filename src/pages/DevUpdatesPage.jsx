@@ -326,7 +326,7 @@ const DevUpdatesPage = () => {
   return (
     <div className="min-h-screen">
       {/* Navigation Bar */}
-      <NavBar logo={customLogo} menu={customMenu} shadow='shadow-xs'/>
+      <NavBar logo={customLogo} menu={customMenu} shadow='shadow-md'/>
 
       {/* Header */}
       <div className="text-[#822e27] pt-28 lg:pt-32 px-8 lg:px-24 mb-12 lg:mb-4">

@@ -68,7 +68,7 @@ const DevUpdates = () => {
                   <img 
                     src={img}
                     alt={`Property detail ${index + 1}`} 
-                    className="w-full lg:h-80 object-cover transition-all hover:scale-105 duration-300 border-top-left-rounded"
+                    className="w-full lg:h-80 object-cover transition-all hover:scale-100 duration-300 border-top-left-rounded"
                   />
                 </div>
               ))}
@@ -99,7 +99,7 @@ const DevUpdates = () => {
                   <img 
                     src={img}
                     alt={`Development progress ${index + 1}`} 
-                    className="w-full h-52 object-cover transition-all hover:scale-105 duration-300 border-top-left-rounded"
+                    className="w-full h-52 object-cover transition-all hover:scale-100 duration-300 border-top-left-rounded"
                   />
                 </div>
               ))}

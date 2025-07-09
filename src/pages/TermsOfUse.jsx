@@ -9,7 +9,7 @@ const TermsOfUse = () => {
   return (
     <div>
         {/* Navigation */}
-        <NavBar logo={customLogo} menu={customMenu} shadow="shadow-xs" />
+        <NavBar logo={customLogo} menu={customMenu} shadow="shadow-md" />
 
         <div className="bg-white min-h-screen p-8 md:p-12 lg:p-24 text-[#822e27]">
           <div className="mx-auto mt-20 md:mt-12">

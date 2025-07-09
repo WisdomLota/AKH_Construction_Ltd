@@ -74,7 +74,7 @@ const Contact = ({
   return (
     <div>
         {/*Navigation*/}
-        <NavBar logo={customLogo} menu={customMenu} shadow='shadow-xs'/>
+        <NavBar logo={customLogo} menu={customMenu} shadow='shadow-md'/>
 
         <div className="bg-gray-50 min-h-screen p-16 md:p-24 lg:p-32 text-[#822e27]">
           <div className="mx-auto items-center mt-12 space-y-12">
