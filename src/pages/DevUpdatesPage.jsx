@@ -45,68 +45,241 @@ const DevUpdatesPage = () => {
     return () => observer.disconnect();
   }, []);
 
-  const ImageGallery = ({ images, isVisible, layout = 'grid' }) => {
-    if (layout === 'grid') {
-      return (
-        <div className="grid grid-cols-2 gap-4">
-          {images.map((img, index) => (
-            <div
-              key={index}
-              className={`overflow-hidden rounded-lg shadow-lg transform transition-all duration-700 hover:scale-105 hover:shadow-xl ${
-                isVisible 
-                  ? `translate-y-0 opacity-100 delay-${index * 150}` 
-                  : 'translate-y-8 opacity-0'
-              }`}
-            >
-              <img
-                src={img}
-                alt={`Construction update ${index + 1}`}
-                className="w-full h-48 object-cover transition-transform duration-500 hover:scale-110"
-              />
-            </div>
-          ))}
-        </div>
-      );
-    }
-
-    // Staggered layout for middle section
+  // AKH1 Layout - 5 images with selective rounded corners and varying sizes
+  const AKH1ImageGallery = ({ images, isVisible }) => {
     return (
-      <div className="space-y-4">
-        <div className="grid grid-cols-3 gap-4 h-32">
-          {images.slice(0, 3).map((img, index) => (
-            <div
-              key={index}
-              className={`overflow-hidden rounded-lg shadow-lg transform transition-all duration-700 hover:scale-105 hover:shadow-xl ${
-                isVisible 
-                  ? `translate-x-0 opacity-100 delay-${index * 100}` 
-                  : index === 1 ? 'translate-x-8 opacity-0' : 'translate-x-(-8) opacity-0'
-              }`}
-            >
-              <img
-                src={img}
-                alt={`Construction update ${index + 1}`}
-                className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
-              />
-            </div>
-          ))}
+      <div className="grid grid-cols-2 gap-2 h-96">
+        {/* Top left - large image with rounded top-left corner */}
+        <div
+          className={`overflow-hidden rounded-tl-2xl shadow-lg transform transition-all duration-700 hover:scale-105 hover:shadow-xl ${
+            isVisible 
+              ? `translate-y-0 opacity-100 delay-0` 
+              : 'translate-y-8 opacity-0'
+          }`}
+        >
+          <img
+            src={images[0]}
+            alt="Construction update 1"
+            className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
+          />
         </div>
-        <div className="grid grid-cols-2 gap-4">
-          {images.slice(3).map((img, index) => (
-            <div
-              key={index + 3}
-              className={`overflow-hidden rounded-lg shadow-lg transform transition-all duration-700 hover:scale-105 hover:shadow-xl ${
-                isVisible 
-                  ? `translate-y-0 opacity-100 delay-${(index + 3) * 100}` 
-                  : 'translate-y-8 opacity-0'
-              }`}
-            >
-              <img
-                src={img}
-                alt={`Construction update ${index + 4}`}
-                className="w-full h-48 object-cover transition-transform duration-500 hover:scale-110"
-              />
-            </div>
-          ))}
+        
+        {/* Top right - grid of 4 smaller images */}
+        <div className="grid grid-cols-2 gap-2">
+          {/* Top right image with rounded top-right corner */}
+          <div
+            className={`overflow-hidden rounded-tr-2xl shadow-lg transform transition-all duration-700 hover:scale-105 hover:shadow-xl ${
+              isVisible 
+                ? `translate-y-0 opacity-100 delay-100` 
+                : 'translate-y-8 opacity-0'
+            }`}
+          >
+            <img
+              src={images[1]}
+              alt="Construction update 2"
+              className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
+            />
+          </div>
+          
+          {/* Small image - no rounded corners */}
+          <div
+            className={`overflow-hidden shadow-lg transform transition-all duration-700 hover:scale-105 hover:shadow-xl ${
+              isVisible 
+                ? `translate-y-0 opacity-100 delay-200` 
+                : 'translate-y-8 opacity-0'
+            }`}
+          >
+            <img
+              src={images[2]}
+              alt="Construction update 3"
+              className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
+            />
+          </div>
+          
+          {/* Small image - no rounded corners */}
+          <div
+            className={`overflow-hidden shadow-lg transform transition-all duration-700 hover:scale-105 hover:shadow-xl ${
+              isVisible 
+                ? `translate-y-0 opacity-100 delay-300` 
+                : 'translate-y-8 opacity-0'
+            }`}
+          >
+            <img
+              src={images[3]}
+              alt="Construction update 4"
+              className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
+            />
+          </div>
+          
+          {/* Bottom right image with rounded bottom-right corner */}
+          <div
+            className={`overflow-hidden rounded-br-2xl shadow-lg transform transition-all duration-700 hover:scale-105 hover:shadow-xl ${
+              isVisible 
+                ? `translate-y-0 opacity-100 delay-400` 
+                : 'translate-y-8 opacity-0'
+            }`}
+          >
+            <img
+              src={images[4]}
+              alt="Construction update 5"
+              className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
+            />
+          </div>
+        </div>
+      </div>
+    );
+  };
+
+  // AKH2 Layout - 5 images with specific corner rounding patterns
+  const AKH2ImageGallery = ({ images, isVisible }) => {
+    return (
+      <div className="space-y-2 w-full">
+        {/* Top row - 3 images with selective rounded corners */}
+        <div className="grid grid-cols-3 gap-2 space-x-2 space-y-2 h-48">
+          {/* Top left image with rounded top-left corner */}
+          <div
+            className={`overflow-hidden h-36 xl:mx-auto mt-10 xl:w-48 xl:ml-20  rounded-tl-3xl transform transition-all duration-700 ${
+              isVisible 
+                ? `translate-y-0 opacity-100 delay-0` 
+                : 'translate-y-8 opacity-0'
+            }`}
+          >
+            <img
+              src={images[0]}
+              alt="Construction update 1"
+              className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+            />
+          </div>
+          
+          {/* Middle top image - no rounded corners */}
+          <div
+            className={`overflow-hidden transform rounded-tl-3xl xl:mx-auto transition-all xl:w-40 xl:ml-20 duration-700 hover:scale-105 ${
+              isVisible 
+                ? `translate-y-0 opacity-100 delay-100` 
+                : 'translate-y-8 opacity-0'
+            }`}
+          >
+            <img
+              src={images[1]}
+              alt="Construction update 2"
+              className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+            />
+          </div>
+          
+          {/* Top right image with rounded top-right corner */}
+          <div
+            className={`overflow-hidden rounded-tr-3xl transform transition-all xl:w-40 xl:ml-12 pb-2 duration-700 hover:scale-105 ${
+              isVisible 
+                ? `translate-y-0 opacity-100 delay-200` 
+                : 'translate-y-8 opacity-0'
+            }`}
+          >
+            <img
+              src={images[2]}
+              alt="Construction update 3"
+              className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+            />
+          </div>
+        </div>
+        
+        {/* Bottom row - 2 larger images */}
+        <div className="grid grid-cols-2 gap-2 space-x-2 space-y-2 h-64">
+          {/* Bottom left image with rounded bottom-left corner */}
+          <div
+            className={`overflow-hidden rounded-bl-4xl transform transition-all duration-700 hover:scale-105  ${
+              isVisible 
+                ? `translate-y-0 opacity-100 delay-300` 
+                : 'translate-y-8 opacity-0'
+            }`}
+          >
+            <img
+              src={images[3]}
+              alt="Construction update 4"
+              className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+            />
+          </div>
+          
+          {/* Bottom right image with rounded bottom-right corner */}
+          <div
+            className={`overflow-hidden rounded-br-4xl transform transition-all duration-700  hover:scale-105  ${
+              isVisible 
+                ? `translate-y-0 opacity-100 delay-400` 
+                : 'translate-y-8 opacity-0'
+            }`}
+          >
+            <img
+              src={images[4]}
+              alt="Construction update 5"
+              className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+            />
+          </div>
+        </div>
+      </div>
+    );
+  };
+
+  // AKH3 Layout - 4 images with selective rounded corners
+  const AKH3ImageGallery = ({ images, isVisible }) => {
+    return (
+      <div className="grid grid-cols-2 gap-2 h-120 space-x-2 space-y-2">
+        {/* Top left image with rounded top-left corner */}
+        <div
+          className={`overflow-hidden rounded-br-4xl shadow-lg transform transition-all duration-700 hover:scale-105 hover:shadow-xl ${
+            isVisible 
+              ? `translate-y-0 opacity-100 delay-0` 
+              : 'translate-y-8 opacity-0'
+          }`}
+        >
+          <img
+            src={images[0]}
+            alt="Construction update 1"
+            className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
+          />
+        </div>
+        
+        {/* Top right image with rounded top-right corner */}
+        <div
+          className={`overflow-hidden rounded-bl-4xl shadow-lg transform transition-all duration-700 hover:scale-105 hover:shadow-xl ${
+            isVisible 
+              ? `translate-y-0 opacity-100 delay-100` 
+              : 'translate-y-8 opacity-0'
+          }`}
+        >
+          <img
+            src={images[1]}
+            alt="Construction update 2"
+            className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
+          />
+        </div>
+        
+        {/* Bottom left image with rounded bottom-left corner */}
+        <div
+          className={`overflow-hidden rounded-tr-4xl shadow-lg transform transition-all duration-700 hover:scale-105 hover:shadow-xl ${
+            isVisible 
+              ? `translate-y-0 opacity-100 delay-200` 
+              : 'translate-y-8 opacity-0'
+          }`}
+        >
+          <img
+            src={images[2]}
+            alt="Construction update 3"
+            className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
+          />
+        </div>
+        
+        {/* Bottom right image with rounded bottom-right corner */}
+        <div
+          className={`overflow-hidden rounded-tl-4xl shadow-lg transform transition-all duration-700 hover:scale-105 hover:shadow-xl ${
+            isVisible 
+              ? `translate-y-0 opacity-100 delay-300` 
+              : 'translate-y-8 opacity-0'
+          }`}
+        >
+          <img
+            src={images[3]}
+            alt="Construction update 4"
+            className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
+          />
         </div>
       </div>
     );
@@ -121,12 +294,13 @@ const DevUpdatesPage = () => {
     </div>
   );
 
-  // Sample construction images (using placeholder images)
+  // Updated image arrays to match the layouts
   const constructionImages = [
     devConstruction1,
     devConstruction2,
     devConstruction3,
     devConstruction4,
+    devConstruction5,
   ];
 
   const constructionImages2 = [
@@ -158,7 +332,7 @@ const DevUpdatesPage = () => {
       {/* Timeline Updates */}
       <div className="space-y-24 pb-24">
         
-        {/* 21st June Update */}
+        {/* 21st June Update - AKH1 Layout */}
         <div id="update-21" className="update-section flex gap-12 px-8 lg:px-24 py-8 min-h-screen">
           <div className="flex flex-col lg:grid lg:grid-cols-2 gap-12 items-start">
             <div className={`space-y-4 my-auto transform transition-all duration-700 delay-300 text-[#822e27] ${
@@ -191,16 +365,15 @@ const DevUpdatesPage = () => {
             </div>
             
             <div className='my-auto mx-auto'>
-                <ImageGallery 
+                <AKH1ImageGallery 
                   images={constructionImages} 
                   isVisible={visibleSections.has('update-21')}
-                  layout="grid"
                 />
             </div>
           </div>
         </div>
 
-        {/* 14th June Update */}
+        {/* 14th June Update - AKH2 Layout */}
         <div id="update-14" className="update-section flex gap-12 bg-[#822e27] text-[#fbfbfb] px-8 lg:px-24 py-8 min-h-screen">
             
           <div className="flex flex-col lg:grid lg:grid-cols-2 gap-12 items-start">
@@ -235,16 +408,15 @@ const DevUpdatesPage = () => {
             </div>
             
             <div className='my-auto mx-auto'>
-                <ImageGallery 
+                <AKH2ImageGallery 
                   images={constructionImages2} 
                   isVisible={visibleSections.has('update-14')}
-                  layout="staggered"
                 />
             </div>
           </div>
         </div>
 
-        {/* 5th June Update */}
+        {/* 5th June Update - AKH3 Layout */}
         <div id="update-5" className="update-section flex gap-12 px-8 lg:px-24 py-8 min-h-screen">
           <div className="flex flex-col lg:grid lg:grid-cols-2 gap-12 items-start">
             <div className={`space-y-4 my-auto transform transition-all duration-700 delay-300 text-[#822e27] ${
@@ -269,10 +441,9 @@ const DevUpdatesPage = () => {
             </div>
             
             <div className='my-auto mx-auto'>
-                <ImageGallery 
+                <AKH3ImageGallery 
                   images={constructionImages3} 
                   isVisible={visibleSections.has('update-5')}
-                  layout="grid"
                 />
             </div>
           </div>
