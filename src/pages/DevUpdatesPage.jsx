@@ -48,87 +48,92 @@ const DevUpdatesPage = () => {
   // AKH1 Layout - 5 images with selective rounded corners and varying sizes
   const AKH1ImageGallery = ({ images, isVisible }) => {
     return (
-      <div className="grid grid-cols-2 gap-2 h-96">
-        {/* Top left - large image with rounded top-left corner */}
-        <div
-          className={`overflow-hidden rounded-tl-2xl shadow-lg transform transition-all duration-700 hover:scale-105 hover:shadow-xl ${
-            isVisible 
-              ? `translate-y-0 opacity-100 delay-0` 
-              : 'translate-y-8 opacity-0'
-          }`}
-        >
-          <img
-            src={images[0]}
-            alt="Construction update 1"
-            className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
-          />
-        </div>
-        
-        {/* Top right - grid of 4 smaller images */}
-        <div className="grid grid-cols-2 gap-2">
-          {/* Top right image with rounded top-right corner */}
+      <div className="grid grid-cols-2 gap-2 min-h-screen my-auto space-x-2">
+        {/* Left Column - Large Images */}
+        <div className="grid grid-rows-2 gap-2 h-152 space-y-4">
+          {/* Large Image 1 with rounded top-left */}
           <div
-            className={`overflow-hidden rounded-tr-2xl shadow-lg transform transition-all duration-700 hover:scale-105 hover:shadow-xl ${
-              isVisible 
-                ? `translate-y-0 opacity-100 delay-100` 
+            className={`overflow-hidden rounded-tl-4xl transform transition-all duration-700 ${
+              isVisible
+                ? `translate-y-0 opacity-100 delay-0`
+                : 'translate-y-8 opacity-0'
+            }`}
+          >
+            <img
+              src={images[0]}
+              alt="Large Construction Image 1"
+              className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+            />
+          </div>
+          
+          {/* Large Image 2 with rounded-bl (bottom-left) */}
+          <div
+            className={`overflow-hidden rounded-bl-4xl transform transition-all duration-700 ${
+              isVisible
+                ? `translate-y-0 opacity-100 delay-100`
                 : 'translate-y-8 opacity-0'
             }`}
           >
             <img
               src={images[1]}
-              alt="Construction update 2"
-              className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
+              alt="Large Construction Image 2"
+              className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
             />
           </div>
+        </div>
           
-          {/* Small image - no rounded corners */}
+        {/* Right Column - Small Images */}
+        <div className="grid grid-rows-3 gap-2 h-152 space-y-4">
+          {/* Small Image 1 with rounded top-right */}
           <div
-            className={`overflow-hidden shadow-lg transform transition-all duration-700 hover:scale-105 hover:shadow-xl ${
-              isVisible 
-                ? `translate-y-0 opacity-100 delay-200` 
+            className={`overflow-hidden rounded-tr-4xl transform transition-all duration-700  ${
+              isVisible
+                ? `translate-y-0 opacity-100 delay-200`
                 : 'translate-y-8 opacity-0'
             }`}
           >
             <img
               src={images[2]}
-              alt="Construction update 3"
-              className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
+              alt="Small Construction Image 1"
+              className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
             />
           </div>
           
-          {/* Small image - no rounded corners */}
+          {/* Small Image 2 with no rounded corners */}
           <div
-            className={`overflow-hidden shadow-lg transform transition-all duration-700 hover:scale-105 hover:shadow-xl ${
-              isVisible 
-                ? `translate-y-0 opacity-100 delay-300` 
+            className={`overflow-hidden rounded-bl-4xl transform transition-all duration-700 ${
+              isVisible
+                ? `translate-y-0 opacity-100 delay-300`
                 : 'translate-y-8 opacity-0'
             }`}
           >
             <img
               src={images[3]}
-              alt="Construction update 4"
-              className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
+              alt="Small Construction Image 2"
+              className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
             />
           </div>
           
-          {/* Bottom right image with rounded bottom-right corner */}
+          {/* Small Image 3 with rounded bottom-right */}
           <div
-            className={`overflow-hidden rounded-br-2xl shadow-lg transform transition-all duration-700 hover:scale-105 hover:shadow-xl ${
-              isVisible 
-                ? `translate-y-0 opacity-100 delay-400` 
+            className={`overflow-hidden rounded-br-4xl transform transition-all duration-700 ${
+              isVisible
+                ? `translate-y-0 opacity-100 delay-400`
                 : 'translate-y-8 opacity-0'
             }`}
           >
             <img
               src={images[4]}
-              alt="Construction update 5"
-              className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
+              alt="Small Construction Image 3"
+              className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
             />
           </div>
         </div>
       </div>
     );
   };
+
+
 
   // AKH2 Layout - 5 images with specific corner rounding patterns
   const AKH2ImageGallery = ({ images, isVisible }) => {
@@ -153,7 +158,7 @@ const DevUpdatesPage = () => {
           
           {/* Middle top image - no rounded corners */}
           <div
-            className={`overflow-hidden transform rounded-tl-3xl xl:mx-auto transition-all xl:w-40 xl:ml-20 duration-700 hover:scale-105 ${
+            className={`overflow-hidden transform rounded-tl-3xl xl:mx-auto transition-all xl:w-40 xl:ml-20 duration-700  ${
               isVisible 
                 ? `translate-y-0 opacity-100 delay-100` 
                 : 'translate-y-8 opacity-0'
@@ -168,7 +173,7 @@ const DevUpdatesPage = () => {
           
           {/* Top right image with rounded top-right corner */}
           <div
-            className={`overflow-hidden rounded-tr-3xl transform transition-all xl:w-40 xl:ml-12 pb-2 duration-700 hover:scale-105 ${
+            className={`overflow-hidden rounded-tr-3xl transform transition-all xl:w-40 xl:ml-12 pb-2 duration-700  ${
               isVisible 
                 ? `translate-y-0 opacity-100 delay-200` 
                 : 'translate-y-8 opacity-0'
@@ -186,7 +191,7 @@ const DevUpdatesPage = () => {
         <div className="grid grid-cols-2 gap-2 space-x-2 space-y-2 h-64">
           {/* Bottom left image with rounded bottom-left corner */}
           <div
-            className={`overflow-hidden rounded-bl-4xl transform transition-all duration-700 hover:scale-105  ${
+            className={`overflow-hidden rounded-bl-4xl transform transition-all duration-700  ${
               isVisible 
                 ? `translate-y-0 opacity-100 delay-300` 
                 : 'translate-y-8 opacity-0'
@@ -201,7 +206,7 @@ const DevUpdatesPage = () => {
           
           {/* Bottom right image with rounded bottom-right corner */}
           <div
-            className={`overflow-hidden rounded-br-4xl transform transition-all duration-700  hover:scale-105  ${
+            className={`overflow-hidden rounded-br-4xl transform transition-all duration-700 ${
               isVisible 
                 ? `translate-y-0 opacity-100 delay-400` 
                 : 'translate-y-8 opacity-0'
@@ -224,7 +229,7 @@ const DevUpdatesPage = () => {
       <div className="grid grid-cols-2 gap-2 h-120 space-x-2 space-y-2">
         {/* Top left image with rounded top-left corner */}
         <div
-          className={`overflow-hidden rounded-br-4xl shadow-lg transform transition-all duration-700 hover:scale-105 hover:shadow-xl ${
+          className={`overflow-hidden rounded-br-4xl transform transition-all duration-700  ${
             isVisible 
               ? `translate-y-0 opacity-100 delay-0` 
               : 'translate-y-8 opacity-0'
@@ -233,13 +238,13 @@ const DevUpdatesPage = () => {
           <img
             src={images[0]}
             alt="Construction update 1"
-            className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
+            className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
           />
         </div>
         
         {/* Top right image with rounded top-right corner */}
         <div
-          className={`overflow-hidden rounded-bl-4xl shadow-lg transform transition-all duration-700 hover:scale-105 hover:shadow-xl ${
+          className={`overflow-hidden rounded-bl-4xl transform transition-all duration-700  ${
             isVisible 
               ? `translate-y-0 opacity-100 delay-100` 
               : 'translate-y-8 opacity-0'
@@ -248,13 +253,13 @@ const DevUpdatesPage = () => {
           <img
             src={images[1]}
             alt="Construction update 2"
-            className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
+            className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
           />
         </div>
         
         {/* Bottom left image with rounded bottom-left corner */}
         <div
-          className={`overflow-hidden rounded-tr-4xl shadow-lg transform transition-all duration-700 hover:scale-105 hover:shadow-xl ${
+          className={`overflow-hidden rounded-tr-4xl transform transition-all duration-700 ${
             isVisible 
               ? `translate-y-0 opacity-100 delay-200` 
               : 'translate-y-8 opacity-0'
@@ -263,13 +268,13 @@ const DevUpdatesPage = () => {
           <img
             src={images[2]}
             alt="Construction update 3"
-            className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
+            className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
           />
         </div>
         
         {/* Bottom right image with rounded bottom-right corner */}
         <div
-          className={`overflow-hidden rounded-tl-4xl shadow-lg transform transition-all duration-700 hover:scale-105 hover:shadow-xl ${
+          className={`overflow-hidden rounded-tl-4xl transform transition-all duration-700 pb-2 pr-2 ${
             isVisible 
               ? `translate-y-0 opacity-100 delay-300` 
               : 'translate-y-8 opacity-0'
@@ -278,7 +283,7 @@ const DevUpdatesPage = () => {
           <img
             src={images[3]}
             alt="Construction update 4"
-            className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
+            className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
           />
         </div>
       </div>
