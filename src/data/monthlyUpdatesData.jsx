@@ -31,7 +31,8 @@ import april27Img3 from "../assets/april27_3rd.png";
 import april12Img1 from "../assets/april12_1st.png";
 import april12Img2 from "../assets/april12_2nd.png";
 import april11Img1 from "../assets/april11_1st.png";
-import april11Img2 from "../assets/april11_2nd.png"
+import april11Img2 from "../assets/april11_2nd.png";
+import april11Img3 from "../assets/april11_3rd.png";
 
 export const monthConfiguration = {
     June: {
@@ -169,7 +170,7 @@ export const monthConfiguration = {
               content: [
                 'Form work to second floor slab.'
               ],
-              images: [april11Img1, april11Img2],
+              images: [april11Img1, april11Img2, april11Img3],
               layout: 'April3',
               bgColor: 'bg-white',
               textColor: 'text-[#822e27]',
