@@ -2,10 +2,12 @@ import realtyImageGroup from "../assets/realtyImageGroup.png";
 import realtyImageGroup2 from "../assets/realtyImageGroup2.png";
 import directArrow from "../assets/directArrow.svg";
 import { useNavigate } from "react-router-dom";
+import React, { useState } from 'react'; // Import React and useState
 
 const Features = () => {
-
   const navigate = useNavigate();
+  const [image2Loaded, setImage2Loaded] = useState(false); // State for realtyImageGroup2 loading
+  const [imageLoaded, setImageLoaded] = useState(false);
 
   return (
     <div className="min-h-screen">
@@ -44,14 +46,21 @@ const Features = () => {
           
           {/* Mobile image grid */}
           <div className="mb-8 w-full">
-            <div className="h-fit w-full">
+            <div className="h-fit w-full relative flex items-center justify-center"> {/* Added relative, flex, items-center, justify-center */}
+              {!image2Loaded && (
+                <div className="absolute inset-0 flex items-center justify-center bg-gray-200 bg-opacity-75 z-10">
+                  {/* Simple loading spinner - replace with a proper spinner if needed */}
+                  <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-gray-900"></div>
+                </div>
+              )}
               <img 
                 src={realtyImageGroup2} 
                 alt="Wardrobe" 
-                className="w-full h-full object-cover"
+                className={`w-full h-full object-cover ${image2Loaded ? '' : 'hidden'}`} // Hide image until loaded
+                onLoad={() => setImage2Loaded(true)} // Set loaded to true on load
+                onError={() => setImage2Loaded(true)} // Handle error by showing content anyway or another fallback
               />
             </div>
-            
           </div>
           
           {/* Explore button */}
@@ -85,10 +94,18 @@ const Features = () => {
                 </div>
               </div>
               <div className="w-1/2">
+                {!imageLoaded && (
+                  <div className="absolute inset-0 flex items-center justify-center bg-gray-200 bg-opacity-75 z-10">
+                    {/* Simple loading spinner - replace with a proper spinner if needed */}
+                    <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-gray-900"></div>
+                  </div>
+                )}
                 <img 
                   src={realtyImageGroup} 
                   alt="group of images" 
-                  className="h-full w-full object-cover"
+                  className={`w-full h-full object-cover ${imageLoaded ? '' : 'hidden'}`} // Hide image until loaded
+                  onLoad={() => setImageLoaded(true)}
+                  onError={() => setImageLoaded(true)}
                 />
               </div>
             </div>

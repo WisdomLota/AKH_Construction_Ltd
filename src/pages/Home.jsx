@@ -2,7 +2,7 @@ import NavBar from "../components/NavBar";
 import Hero from "../components/Hero.jsx";
 import About from "../components/About.jsx";
 import SignUp from "../components/SignUp.jsx";
-import Features from "../components/Features.jsx";
+import Features from "../components/RealtyFeatures.jsx";
 import MidSection from "../components/MidSection.jsx";
 import FAQ from "../components/FAQ.jsx";
 import ContactForm from "../components/ContactForm.jsx";

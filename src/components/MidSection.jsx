@@ -14,6 +14,8 @@ import { useNavigate } from 'react-router-dom';
 
 const MidSection = () => {
   const navigate = useNavigate();
+
+  const [loadVirtualImage, setLoadVirtualImage] = useState(false);
   
   // Array of all trending realty images
   const trendingImages = [
@@ -76,10 +78,18 @@ const MidSection = () => {
           </div>
           <div className="lg:w-2/3 ">
             <div className="relative border-t-12 border-r-12 border-white">
+              {!loadVirtualImage && (
+                <div className="absolute inset-0 flex items-center justify-center bg-gray-200 bg-opacity-75 z-10">
+                  {/* Simple loading spinner - replace with a proper spinner if needed */}
+                  <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-gray-900"></div>
+                </div>
+              )}
               <img 
                 src={virtualTourImg}
                 alt="Modern home virtual tour" 
-                className="w-full h-auto object-cover rounded-lg relative z-10"
+                className={`w-full h-auto object-cover rounded-lg relative z-10 ${loadVirtualImage ? "" : "hidden"}`}
+                onLoad={() => setLoadVirtualImage(true)}
+                onError={() => setLoadVirtualImage(true)}
               />
             </div>
           </div>  
