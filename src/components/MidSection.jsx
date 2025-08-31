@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import DevUpdates from './DevUpdates.jsx';
+import Features from './RealtyFeatures';
 import virtualTourImg from '../assets/virtualTourImg.png';
 import directArrow from '../assets/directArrow.svg';
 import blueDirectArrow from '../assets/blueDirectArrow.svg';
@@ -158,9 +158,8 @@ const MidSection = () => {
         </div>
       </section>
 
-      {/* Development Updates Section */}
-      <DevUpdates />
-
+      {/* Features Section */}
+      <Features/>
 
       {/* Coming Soon Section */}
       <section className="w-full bg-white py-8 min-h-screen flex flex-col lg:items-center lg:justify-center">

@@ -33,7 +33,7 @@ const DevUpdates = () => {
   return (
     <div>
       {/* Development Updates Section */}
-      <section className="w-full bg-[#822e27] text-white min-h-screen flex flex-col lg:items-center lg:justify-center">
+      <section className="w-full bg-[#822e27] text-white min-h-screen flex flex-col lg:items-center lg:justify-center overflow-x-hidden">
         
         {/* Desktop Layout */}
         <div className="hidden lg:flex flex-col lg:flex-row items-center lg:space-x-24">
@@ -55,7 +55,7 @@ const DevUpdates = () => {
               <img 
                 src={devUpdateImages[currentDevUpdateImage]}
                 alt="Development update" 
-                className="w-full h-[600px] object-cover transition-all duration-500 border-bottom-left-rounded"
+                className="w-full h-[450px] object-cover transition-all duration-500 border-bottom-left-rounded"
               />
             </div>
             <div className='grid grid-cols-2 gap-4 mt-8'>

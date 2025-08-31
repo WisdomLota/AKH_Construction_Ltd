@@ -4,6 +4,7 @@ import About from "../components/About.jsx";
 import SignUp from "../components/SignUp.jsx";
 import Features from "../components/RealtyFeatures.jsx";
 import MidSection from "../components/MidSection.jsx";
+import DevUpdates from "../components/DevUpdates.jsx";
 import FAQ from "../components/FAQ.jsx";
 import ContactForm from "../components/ContactForm.jsx";
 import FooterBox from "../components/FooterBox.jsx";
@@ -14,8 +15,8 @@ import "../styles/general.css";
 const Home = () => {
   
     return (
-    <div className="min-h-screen flex flex-col">
-      <div style={{backgroundImage: `url(${explorePic})`, backgroundSize: "cover", backgroundPosition: "center"}} className="h-fit border-bottom-left-rounded">
+    <div className="min-h-screen flex flex-col overflow-x-hidden">
+      <div style={{backgroundImage: `url(${explorePic})`, backgroundSize: "cover", backgroundPosition: "center"}} className="h-fit border-bottom-left-rounded w-full">
         {/* Navigation */}
         <NavBar textColor="text-white" borderColor="border-white"/>
 
@@ -26,8 +27,8 @@ const Home = () => {
       {/* About Section */}
       <About/>
 
-      {/* Features Section */}
-      <Features/>
+      {/* Development Updates Section */}
+      <DevUpdates />
 
       {/* SignUp Section */}
       <SignUp/>
@@ -42,7 +43,7 @@ const Home = () => {
       <ContactForm bgColor="bg-[#822e27]" textColor="text-white" bordersColor="border-white" arrow={customArrow} btnText="text-white" btnLine="border-white"/>
 
       {/* Footer */}
-      <FooterBox/>
+      <FooterBox className="w-full"/>
       
     </div>
     )
