@@ -16,6 +16,22 @@ import devConstruction14 from '../assets/devConstruction14.png';
 import devConstruction15 from '../assets/devConstruction15.png';
 import devConstruction16 from '../assets/devConstruction16.png';
 import devConstruction17 from '../assets/devConstruction17.png';
+import July24Img1 from "../assets/July24Img1.png";
+import July24Img2 from "../assets/July24Img2.png";
+import July24Img3 from "../assets/July24Img3.png";
+import July18Img1 from "../assets/July18Img1.png";
+import July18Img2 from "../assets/July18Img2.png";
+import July18Img3 from "../assets/July18Img3.png";
+import July18Img4 from "../assets/July18Img4.png";
+import July18Img5 from "../assets/July18Img5.png";
+import July11Img1 from "../assets/July11Img1.png";
+import July11Img2 from "../assets/July11Img2.png";
+import July11Img3 from "../assets/July11Img3.png";
+import July11Img4 from "../assets/July11Img4.png";
+import July5Img1 from "../assets/July5Img1.png";
+import July5Img2 from "../assets/July5Img2.png";
+import July5Img3 from "../assets/July5Img3.png";
+import July5Img4 from "../assets/July5Img4.png";
 import may24Img1 from "../assets/may24_1st.png";
 import may24Img2 from "../assets/may24_2nd.png";
 import may24Img3 from "../assets/may24_3rd.png";
@@ -38,6 +54,66 @@ import april11Img2 from "../assets/april11_2nd.png";
 import april11Img3 from "../assets/april11_3rd.png";
 
 export const monthConfiguration = {
+    July: {
+        title: 'Development Updates',
+        subtitle: 'As at July 2025',
+        updates: [
+            {
+              id: 'update-24',
+              date: '24th July',
+              content: [
+                'Form work to house 2&3 has commenced and will be completed by Friday. Steel roof trusses to house 4&5 has commenced and will be completed by Friday. Roofing proper should commence by next week',
+                'Water treatment house block work being completed to roof level'
+              ],
+              images: [July24Img1, July24Img2, July24Img3],
+              layout: 'July1',
+              bgColor: 'bg-[#822e27]',
+              textColor: 'text-[#fbfbfb]',
+              iconColor: 'bg-[#fbfbfb]'
+            },
+            {
+                id: "update-18",
+                date: "18th July",
+                content: [
+                    'Casting of concrete facia to houses 5&4 completed. Gate house block work completed including gable walls, only concrete facia is outstanding. Water treatment house at lintel level will be cast tomorrow.',
+                    'Form work to house 3&4 will commence next week as well as steel roof trusses to house 4&5.',
+                    'Construction of our access road has commenced so by the time we are done we hope the road will be ready as well.'
+                ],
+                images: [July18Img1, July18Img2, July18Img3, July18Img4, July18Img5],
+                layout: 'July2',
+                bgColor: 'bg-white',
+                textColor: 'text-[#822e27]',
+                iconColor: 'bg-[#6ca2e3]'
+            },
+            {
+              id: 'update-11',
+              date: '11th July',
+              content: [
+                'Concrete facia formwork for houses 4&5 complete. Reinforcements being put in place, will be completed by Monday. Casting of the concrete facia will be done next week.',
+                'All internal electrical/mechanical fix piping has been completed ready for plastering.',
+                'Gate house and water treatment house block work at lintel level. Formwork and reinforcement installation are ongoing. Will be completed by tomorrow.'
+              ],
+              images: [July11Img1, July11Img2, July11Img3, July11Img4],
+              layout: 'July3',
+              bgColor: 'bg-[#822e27]',
+              textColor: 'text-[#fbfbfb]',
+              iconColor: 'bg-[#fbfbfb]'
+            },
+            {
+              id: 'update-5',
+              date: '5th July',
+              content: [
+                'Gable walls completed. Commenced formwork to the concrete facia this week to be completed by next week. Reinforcement work will commence by Monday, we hope to start casting by the end of the week.',
+                'Steel roof trusses are already on site and roofing sheets are ready. Still working on the electrical/mechanical first fix piping, almost complete. Plastering should commence very soon.'
+              ],
+              images: [July5Img1, July5Img2, July5Img3, July5Img4],
+              layout: 'July4',
+              bgColor: 'bg-white',
+              textColor: 'text-[#822e27]',
+              iconColor: 'bg-[#822e27]'
+            },
+        ]
+    },
     June: {
         title: 'Development Updates',
         subtitle: 'As at June 2025',

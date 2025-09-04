@@ -1,7 +1,7 @@
-// 21st June AKH1 Layout - 5 images with selective rounded corners and varying sizes
-const June2ImageGallery = ({ images, isVisible }) => {
+// 18th July AKH1 Layout - 5 images with selective rounded corners and varying sizes
+const July2ImageGallery = ({ images, isVisible }) => {
   return (
-    <div className="grid grid-cols-2 gap-2 h-160 my-auto space-x-2">
+    <div className="grid grid-cols-2 gap-2 h-160 my-auto space-x-2 py-4">
       {/* Left Column - Large Images */}
       <div className="grid grid-rows-2 gap-2 h-152 space-y-4">
         {/* Large Image 1 with rounded top-left */}
@@ -14,7 +14,7 @@ const June2ImageGallery = ({ images, isVisible }) => {
         >
           <img
             src={images[0]}
-            alt="Large Construction Image 1"
+            alt="July 18 Image 1"
             className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
           />
         </div>
@@ -29,7 +29,7 @@ const June2ImageGallery = ({ images, isVisible }) => {
         >
           <img
             src={images[1]}
-            alt="Large Construction Image 2"
+            alt="July 18 Image 2"
             className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
           />
         </div>
@@ -86,4 +86,4 @@ const June2ImageGallery = ({ images, isVisible }) => {
   );
 };
 
-export default June2ImageGallery;
+export default July2ImageGallery;

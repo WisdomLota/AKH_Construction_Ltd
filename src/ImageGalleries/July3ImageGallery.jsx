@@ -1,12 +1,12 @@
-// 14th June AKH2 Layout - 5 images with specific corner rounding patterns
-const June3ImageGallery = ({ images, isVisible }) => {
+// 11th July AKH2 Layout - 5 images with specific corner rounding patterns
+const July3ImageGallery = ({ images, isVisible }) => {
   return (
     <div className="space-y-2 w-full h-full py-4">
-      {/* Top row - 3 images with selective rounded corners */}
+      {/* Top row - 2 images with selective rounded corners */}
       <div className="grid grid-cols-3 gap-2 space-x-2 space-y-2 h-48">
         {/* Top left image with rounded top-left corner */}
         <div
-          className={`overflow-hidden h-36 xl:mx-auto mt-10 xl:w-48 xl:ml-12 rounded-tl-3xl transform transition-all duration-700 ${
+          className={`overflow-hidden h-36 xl:mx-auto mt-10 xl:w-48 xl:ml-8  rounded-tl-3xl transform transition-all duration-700 ${
             isVisible 
               ? `translate-y-0 opacity-100 delay-0` 
               : 'translate-y-8 opacity-0'
@@ -14,14 +14,14 @@ const June3ImageGallery = ({ images, isVisible }) => {
         >
           <img
             src={images[0]}
-            alt="Construction update 1"
+            alt="July 11 update 1"
             className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
           />
         </div>
         
-        {/* Middle top image - no rounded corners */}
+        {/* Right top image - no rounded corners */}
         <div
-          className={`overflow-hidden transform rounded-tl-3xl xl:mx-auto transition-all xl:w-32 xl:ml-20 duration-700  ${
+          className={`overflow-hidden transform rounded-tl-3xl xl:mx-auto transition-all xl:w-68 lg:w-80 w-48 xl:ml-16 duration-700  ${
             isVisible 
               ? `translate-y-0 opacity-100 delay-100` 
               : 'translate-y-8 opacity-0'
@@ -29,22 +29,7 @@ const June3ImageGallery = ({ images, isVisible }) => {
         >
           <img
             src={images[1]}
-            alt="Construction update 2"
-            className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
-          />
-        </div>
-        
-        {/* Top right image with rounded top-right corner */}
-        <div
-          className={`overflow-hidden rounded-tr-3xl transform transition-all xl:w-32 xl:ml-12 pb-2 duration-700  ${
-            isVisible 
-              ? `translate-y-0 opacity-100 delay-200` 
-              : 'translate-y-8 opacity-0'
-          }`}
-        >
-          <img
-            src={images[2]}
-            alt="Construction update 3"
+            alt="July 11 update 2"
             className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
           />
         </div>
@@ -61,8 +46,8 @@ const June3ImageGallery = ({ images, isVisible }) => {
           }`}
         >
           <img
-            src={images[3]}
-            alt="Construction update 4"
+            src={images[2]}
+            alt="July 11 update 4"
             className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
           />
         </div>
@@ -76,8 +61,8 @@ const June3ImageGallery = ({ images, isVisible }) => {
           }`}
         >
           <img
-            src={images[4]}
-            alt="Construction update 5"
+            src={images[3]}
+            alt="July 11 update 5"
             className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
           />
         </div>
@@ -86,4 +71,4 @@ const June3ImageGallery = ({ images, isVisible }) => {
   );
 };
 
-export default June3ImageGallery;
+export default July3ImageGallery;

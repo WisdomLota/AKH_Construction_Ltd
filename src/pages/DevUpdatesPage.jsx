@@ -17,14 +17,18 @@ import June1ImageGallery from '../ImageGalleries/June1ImageGallery.jsx';
 import June2ImageGallery from '../ImageGalleries/June2ImageGallery.jsx';
 import June3ImageGallery from '../ImageGalleries/June3ImageGallery.jsx';
 import June4ImageGallery from '../ImageGalleries/June4ImageGallery.jsx';
+import July1ImageGallery from '../ImageGalleries/July1ImageGallery.jsx';
+import July2ImageGallery from '../ImageGalleries/July2ImageGallery.jsx';
+import July3ImageGallery from '../ImageGalleries/July3ImageGallery.jsx';
+import July4ImageGallery from '../ImageGalleries/July4ImageGallery.jsx';
 import { monthConfiguration } from '../data/monthlyUpdatesData.jsx';
 
 
 const DevUpdatesPage = () => {
   const [visibleSections, setVisibleSections] = useState(new Set());
-  const [currentMonth, setCurrentMonth] = useState("June");
+  const [currentMonth, setCurrentMonth] = useState("July");
 
-  const monthOrder = ["June", "May", "April"];
+  const monthOrder = ["July", "June", "May", "April"];
 
   // Navigation functions
   const navigateToNextMonth = () => {
@@ -63,6 +67,14 @@ const DevUpdatesPage = () => {
   // Function to render the appropriate image gallery based on layout
   const renderImageGallery = (layout, images, isVisible) => {
     switch (layout) {
+      case 'July1':
+        return <July1ImageGallery images={images} isVisible={isVisible} />;
+      case 'July2':
+        return <July2ImageGallery images={images} isVisible={isVisible} />;
+      case 'July3':
+        return <July3ImageGallery images={images} isVisible={isVisible} />;
+      case 'July4':
+        return <July4ImageGallery images={images} isVisible={isVisible} />;
       case 'June1':
         return <June1ImageGallery images={images} isVisible={isVisible} />;
       case 'June2':
@@ -105,7 +117,7 @@ const DevUpdatesPage = () => {
       
       <div className="py-8">
         {/* Header */}
-        <div className="text-[#822e27] pt-28 lg:pt-32 mb-12 lg:mb-4 lg:px-24 px-8">
+        <div className="text-[#822e27] pt-28 lg:pt-32 mb-12 lg:mb-4 lg:px-24 px-8 py-4">
           <h1 className="text-4xl lg:text-7xl font-bold lg:font-semibold mb-2 animate-fade-in">{currentMonthData.title}</h1>
           <p className="text-2xl lg:text-4xl font-semibold animate-fade-in-delay">{currentMonthData.subtitle}</p>
         </div>
