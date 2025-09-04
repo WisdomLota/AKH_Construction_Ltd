@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import defaultLogo from '../assets/footerLogoAKH.png';
 
 const FooterBox = ({ 
-  mainBgColor = 'bg-white',
+  mainBgColor = 'bg-[#fbfbfb]',
   footerBgColor = 'bg-[#822e27]', 
   mainTextColor = 'text-[#822e27]', 
   footerTextColor = 'text-white',

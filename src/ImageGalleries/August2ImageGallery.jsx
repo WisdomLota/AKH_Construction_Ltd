@@ -1,5 +1,5 @@
-// April 27th Layout - 3 images with specific arrangement
-const April1ImageGallery = ({ images, isVisible }) => {
+// August 20th Layout - 3 images with specific arrangement
+const August2ImageGallery = ({ images, isVisible }) => {
   return (
     <div className="grid grid-cols-2 gap-4 h-full py-4">
       {/* Left - Large image */}
@@ -10,7 +10,7 @@ const April1ImageGallery = ({ images, isVisible }) => {
       >
         <img
           src={images[0]} // Assuming images[0] is the large left image
-          alt="April 27 update 1"
+          alt="August 20 update 1"
           className="w-full h-full rounded-bl-4xl object-cover transition-transform duration-500 hover:scale-100"
         />
       </div>
@@ -24,7 +24,7 @@ const April1ImageGallery = ({ images, isVisible }) => {
         >
           <img
             src={images[1]} // Assuming images[1] is the top-right image
-            alt="April 27 update 2"
+            alt="August 20 update 2"
             className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
           />
         </div>
@@ -35,7 +35,7 @@ const April1ImageGallery = ({ images, isVisible }) => {
         >
           <img
             src={images[2]} // Assuming images[2] is the bottom-right image
-            alt="April 27 update 3"
+            alt="August 20 update 3"
             className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
           />
         </div>
@@ -44,4 +44,4 @@ const April1ImageGallery = ({ images, isVisible }) => {
   );
 };
 
-export default April1ImageGallery;
+export default August2ImageGallery;

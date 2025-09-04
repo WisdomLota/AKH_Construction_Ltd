@@ -1,5 +1,5 @@
-// April 12th Layout - 2 large images stacked vertically
-const April2ImageGallery = ({ images, isVisible }) => {
+// Ausgust 19th Layout - 2 large images stacked vertically
+const August3ImageGallery = ({ images, isVisible }) => {
   return (
     <div className="flex flex-col gap-4 lg:h-200 py-4"> {/* Changed to flex-col for vertical stacking */}
       {/* Top - Large image */}
@@ -10,7 +10,7 @@ const April2ImageGallery = ({ images, isVisible }) => {
       >
         <img
           src={images[0]} // Assuming images[0] is the top image
-          alt="April 12 update 1"
+          alt="August 19 update 1"
           className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
         />
       </div>
@@ -22,7 +22,7 @@ const April2ImageGallery = ({ images, isVisible }) => {
       >
         <img
           src={images[1]} // Assuming images[1] is the bottom image
-          alt="April 12 update 2"
+          alt="August 19 update 2"
           className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
         />
       </div>
@@ -30,4 +30,4 @@ const April2ImageGallery = ({ images, isVisible }) => {
   );
 };
 
-export default April2ImageGallery;
+export default August3ImageGallery;

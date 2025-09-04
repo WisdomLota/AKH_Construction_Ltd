@@ -16,6 +16,24 @@ import devConstruction14 from '../assets/devConstruction14.png';
 import devConstruction15 from '../assets/devConstruction15.png';
 import devConstruction16 from '../assets/devConstruction16.png';
 import devConstruction17 from '../assets/devConstruction17.png';
+import August28Img1 from "../assets/August28Img1.png";
+import August28Img2 from "../assets/August28Img2.png";
+import August20Img1 from "../assets/August20Img1.png";
+import August20Img2 from "../assets/August20Img2.png";
+import August20Img3 from "../assets/August20Img3.png";
+import August19Img1 from "../assets/August19Img1.png";
+import August19Img2 from "../assets/August19Img2.png";
+import August16Img1 from "../assets/August16Img1.png";
+import August16Img2 from "../assets/August16Img2.png";
+import August16Img3 from "../assets/August16Img3.png";
+import August9Img1 from "../assets/August9Img1.png";
+import August9Img2 from "../assets/August9Img2.png";
+import August9Img3 from "../assets/August9Img3.png";
+import August9Img4 from "../assets/August9Img4.png";
+import August1Img1 from "../assets/August1Img1.png";
+import August1Img2 from "../assets/August1Img2.png";
+import August1Img3 from "../assets/August1Img3.png";
+import August1Img4 from "../assets/August1Img4.png";
 import July24Img1 from "../assets/July24Img1.png";
 import July24Img2 from "../assets/July24Img2.png";
 import July24Img3 from "../assets/July24Img3.png";
@@ -54,6 +72,92 @@ import april11Img2 from "../assets/april11_2nd.png";
 import april11Img3 from "../assets/april11_3rd.png";
 
 export const monthConfiguration = {
+    August: {
+        title: 'Development Updates',
+        subtitle: 'As at August 2025',
+        updates: [
+            {
+              id: 'update-28',
+              date: '28th August',
+              content: [
+                'We have commenced the installation of the roof trusses for house 1 and gate house. Installation of the roofing sheets is still ongoing for all houses.',
+                'Casting of gate pillars and installation of gate rails will commence this week.',
+                'Internal plastering for the units are ongoing. Aluminium window subframes will be delivered on Friday and installed. We will also commence the installation of the window sills.'
+              ],
+              images: [August28Img1, August28Img2],
+              layout: 'August1',
+              bgColor: 'bg-[#822e27]',
+              textColor: 'text-[#fbfbfb]',
+              iconColor: 'bg-[#fbfbfb]'
+            },
+            {
+                id: "update-20",
+                date: "20th August",
+                content: [
+                    'We will remove the formwork for house 1 and commence the installation of the roof trusses this week. Installation of the roofing sheets is currently ongoing for houses 2-5 which will be completed this week.',
+                    'Formwork to gate house concrete facia will commence this week. Casting of gate pillars and installation of gate rails will be done next week.',
+                    'Internal plastering for ground floor and first floor for the units are ongoing. Aluminium window subframes will be delivered this week and installed. We will also commence the installation of the window sills.'
+                ],
+                images: [August20Img1, August20Img2, August20Img3],
+                layout: 'August2',
+                bgColor: 'bg-[#fbfbfb]',
+                textColor: 'text-[#822e27]',
+                iconColor: 'bg-[#6ca2e3]'
+            },
+            {
+              id: 'update-19',
+              date: '19th August',
+              content: [
+                'Roofing ongoing.........',
+              ],
+              images: [August19Img1, August19Img2],
+              layout: 'August3',
+              bgColor: 'bg-[#822e27]',
+              textColor: 'text-[#fbfbfb]',
+              iconColor: 'bg-[#fbfbfb]'
+            },
+            {
+              id: 'update-16',
+              date: '16th August',
+              content: [
+                'Casting of house 1 concrete facia was completed on Wednesday. Installation of roof trusses will commence next week. Installation of roof trusses for houses 2-5 is complete ready for roofing sheets. Installation of roofing sheets will commence next week.',
+                'Internal plastering for ground floor and first floor for the units is at advanced stage.'
+              ],
+              images: [August16Img1, August16Img2, August16Img3],
+              layout: 'August4',
+              bgColor: 'bg-[#fbfbfb]',
+              textColor: 'text-[#822e27]',
+              iconColor: 'bg-[#822e27]'
+            },
+            {
+              id: 'update-9',
+              date: '9th August',
+              content: [
+                'Steel Roof trusses to houses 4&5 has been completed, houses 2&3 will be completed by Monday/Tuesday. Formwork to concrete facia to house 5 is completed, reinforcement is being installed, will be completed by Monday. Roofing sheets are under production will be on site by Wednesday next week.',
+                'Internal plaster work on the ground floor and first floor are ongoing with 3 flats largely completed.',
+                'Casting of the roof deck to the water treatment house was completed Today. Formwork to gate house concrete facia will commence next week.'
+              ],
+              images: [August9Img1, August9Img2, August9Img3, August9Img4],
+              layout: 'August5',
+              bgColor: 'bg-[#822e27]',  
+              textColor: 'text-[#fbfbfb]',
+              iconColor: 'bg-[#fbfbfb]'
+            },
+            {
+              id: 'update-1',
+              date: '1st August',
+              content: [
+                'Steel Roof trusses to houses 4&5 will be completed by 2row. Concrete facia to houses 2&3 has been cast, formwork will be removed on Monday and steel trusses work will commence on Tuesday/Wednesday. Roofing will commence next week.',
+                'Casting of the roof deck to the water treatment house will be completed by Monday/Tuesday next week. Formwork to house 5 concrete facia and the gate house concrete facia will commence next week as well.',
+              ],
+              images: [August1Img1, August1Img2, August1Img3, August1Img4],
+              layout: 'August6',
+              bgColor: 'bg-[#fbfbfb]',
+              textColor: 'text-[#822e27]',
+              iconColor: 'bg-[#822e27]'
+            },
+        ]
+    },
     July: {
         title: 'Development Updates',
         subtitle: 'As at July 2025',
@@ -81,7 +185,7 @@ export const monthConfiguration = {
                 ],
                 images: [July18Img1, July18Img2, July18Img3, July18Img4, July18Img5],
                 layout: 'July2',
-                bgColor: 'bg-white',
+                bgColor: 'bg-[#fbfbfb]',
                 textColor: 'text-[#822e27]',
                 iconColor: 'bg-[#6ca2e3]'
             },
@@ -108,7 +212,7 @@ export const monthConfiguration = {
               ],
               images: [July5Img1, July5Img2, July5Img3, July5Img4],
               layout: 'July4',
-              bgColor: 'bg-white',
+              bgColor: 'bg-[#fbfbfb]',
               textColor: 'text-[#822e27]',
               iconColor: 'bg-[#822e27]'
             },
@@ -141,7 +245,7 @@ export const monthConfiguration = {
                 ],
                 images: [devConstruction1, devConstruction2, devConstruction3, devConstruction4, devConstruction5],
                 layout: 'June2',
-                bgColor: 'bg-white',
+                bgColor: 'bg-[#fbfbfb]',
                 textColor: 'text-[#822e27]',
                 iconColor: 'bg-[#6ca2e3]'
             },
@@ -167,7 +271,7 @@ export const monthConfiguration = {
               ],
               images: [devConstruction11, devConstruction12, devConstruction13, devConstruction14],
               layout: 'June4',
-              bgColor: 'bg-white',
+              bgColor: 'bg-[#fbfbfb]',
               textColor: 'text-[#822e27]',
               iconColor: 'bg-[#822e27]'
             },
@@ -185,7 +289,7 @@ export const monthConfiguration = {
                 ],
                 images: [devConstruction1, devConstruction2, devConstruction3],
                 layout: 'May1',
-                bgColor: 'bg-white',
+                bgColor: 'bg-[#fbfbfb]',
                 textColor: 'text-[#822e27]',
                 iconColor: 'bg-[#6ca2e3]'
             },
@@ -209,7 +313,7 @@ export const monthConfiguration = {
               ],
               images: [may14Img1, may14Img2, may14Img3, may14Img4],
               layout: 'May3',
-              bgColor: 'bg-white',
+              bgColor: 'bg-[#fbfbfb]',
               textColor: 'text-[#822e27]',
               iconColor: 'bg-[#822e27]'
             },
@@ -240,7 +344,7 @@ export const monthConfiguration = {
                 ],
                 images: [april27Img1, april27Img2, april27Img3],
                 layout: 'April1',
-                bgColor: 'bg-white',
+                bgColor: 'bg-[#fbfbfb]',
                 textColor: 'text-[#822e27]',
                 iconColor: 'bg-[#6ca2e3]'
             },
@@ -264,7 +368,7 @@ export const monthConfiguration = {
               ],
               images: [april11Img1, april11Img2, april11Img3],
               layout: 'April3',
-              bgColor: 'bg-white',
+              bgColor: 'bg-[#fbfbfb]',
               textColor: 'text-[#822e27]',
               iconColor: 'bg-[#822e27]'
             },

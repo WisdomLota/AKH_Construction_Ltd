@@ -21,14 +21,20 @@ import July1ImageGallery from '../ImageGalleries/July1ImageGallery.jsx';
 import July2ImageGallery from '../ImageGalleries/July2ImageGallery.jsx';
 import July3ImageGallery from '../ImageGalleries/July3ImageGallery.jsx';
 import July4ImageGallery from '../ImageGalleries/July4ImageGallery.jsx';
+import August1ImageGallery from '../ImageGalleries/August1ImageGallery.jsx';
+import August2ImageGallery from '../ImageGalleries/August2ImageGallery.jsx';
+import August3ImageGallery from '../ImageGalleries/August3ImageGallery.jsx';
+import August4ImageGallery from '../ImageGalleries/August4ImageGallery.jsx';
+import August5ImageGallery from '../ImageGalleries/August5ImageGallery.jsx';
+import August6ImageGallery from '../ImageGalleries/August6ImageGallery.jsx';
 import { monthConfiguration } from '../data/monthlyUpdatesData.jsx';
 
 
 const DevUpdatesPage = () => {
   const [visibleSections, setVisibleSections] = useState(new Set());
-  const [currentMonth, setCurrentMonth] = useState("July");
+  const [currentMonth, setCurrentMonth] = useState("August");
 
-  const monthOrder = ["July", "June", "May", "April"];
+  const monthOrder = ["August", "July", "June", "May", "April"];
 
   // Navigation functions
   const navigateToNextMonth = () => {
@@ -67,6 +73,18 @@ const DevUpdatesPage = () => {
   // Function to render the appropriate image gallery based on layout
   const renderImageGallery = (layout, images, isVisible) => {
     switch (layout) {
+      case 'August1':
+        return <August1ImageGallery images={images} isVisible={isVisible} />;
+      case 'August2':
+        return <August2ImageGallery images={images} isVisible={isVisible} />;
+      case 'August3':
+        return <August3ImageGallery images={images} isVisible={isVisible} />;
+      case 'August4':
+        return <August4ImageGallery images={images} isVisible={isVisible} />;
+      case 'August5':
+        return <August5ImageGallery images={images} isVisible={isVisible} />;
+      case 'August6':
+        return <August6ImageGallery images={images} isVisible={isVisible} />;
       case 'July1':
         return <July1ImageGallery images={images} isVisible={isVisible} />;
       case 'July2':
@@ -189,10 +207,10 @@ const DevUpdatesPage = () => {
       </div>
 
       {/* Navigation Controls */}
-      <div className='flex justify-between mt-24'>
+      <div className='flex justify-between mt-24 bg-[#fbfbfb]'>
         <div className='lg:-mt-40 cursor-pointer' onClick={navigateToPrevMonth}>
           <div className='flex space-x-2 justify-end items-center px-8 lg:px-24 py-4'>
-            <div className="w-14 h-14 rounded-full bg-white flex items-center justify-center cursor-pointer">
+            <div className="w-14 h-14 rounded-full bg-[#fbfbfb] flex items-center justify-center cursor-pointer">
                 <img src={redDirectArrow2} alt="red-direct-arrow" />
             </div>
             <span className='w-20 border-b-2 text-[#822e27] font-semibold text-xl border-[#822e27] pb-1'>PREV</span>
@@ -201,7 +219,7 @@ const DevUpdatesPage = () => {
         <div className='lg:-mt-40 cursor-pointer' onClick={navigateToNextMonth}>
           <div className='flex space-x-2 justify-end items-center px-8 lg:px-24 py-4'>
             <span className='w-20 border-b-2 text-[#822e27] font-semibold text-xl border-[#822e27] pb-1'>NEXT</span>
-            <div className="w-14 h-14 rounded-full bg-white flex items-center justify-center cursor-pointer">
+            <div className="w-14 h-14 rounded-full bg-[#fbfbfb] flex items-center justify-center cursor-pointer">
                 <img src={redDirectArrow} alt="red-direct-arrow" />
             </div>
           </div>
@@ -209,7 +227,7 @@ const DevUpdatesPage = () => {
       </div>
 
       {/* Footer */}
-      <FooterBox mainBgColor='bg-[#822e27]' mainTextColor='text-white' footerTextColor='text-[#822e27]' footerBgColor='bg-white' logo={customFooterLogo}/>
+      <FooterBox mainBgColor='bg-[#822e27]' mainTextColor='text-white' footerTextColor='text-[#822e27]' footerBgColor='bg-[#fbfbfb]' logo={customFooterLogo}/>
 
       <style jsx>{`
         @keyframes fade-in {
