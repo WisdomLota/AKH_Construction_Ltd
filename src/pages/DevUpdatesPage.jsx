@@ -42,6 +42,7 @@ const DevUpdatesPage = () => {
     const nextIndex = (currentIndex + 1) % monthOrder.length;
     setCurrentMonth(monthOrder[nextIndex]);
     setVisibleSections(new Set()); // Reset visible sections for animation
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   const navigateToPrevMonth = () => {
@@ -49,6 +50,7 @@ const DevUpdatesPage = () => {
     const prevIndex = currentIndex === 0 ? monthOrder.length - 1 : currentIndex - 1;
     setCurrentMonth(monthOrder[prevIndex]);
     setVisibleSections(new Set()); // Reset visible sections for animation
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   //scroll triggered animation using Intersection Observer API
