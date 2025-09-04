@@ -16,6 +16,7 @@ import April3ImageGallery from '../ImageGalleries/April3ImageGallery.jsx';
 import June1ImageGallery from '../ImageGalleries/June1ImageGallery.jsx';
 import June2ImageGallery from '../ImageGalleries/June2ImageGallery.jsx';
 import June3ImageGallery from '../ImageGalleries/June3ImageGallery.jsx';
+import June4ImageGallery from '../ImageGalleries/June4ImageGallery.jsx';
 import { monthConfiguration } from '../data/monthlyUpdatesData.jsx';
 
 
@@ -68,6 +69,8 @@ const DevUpdatesPage = () => {
         return <June2ImageGallery images={images} isVisible={isVisible} />;
       case 'June3':
         return <June3ImageGallery images={images} isVisible={isVisible} />;
+      case 'June4':
+        return <June4ImageGallery images={images} isVisible={isVisible} />;
       case 'May1':
         return <May1ImageGallery images={images} isVisible={isVisible} />;
       case 'May2':

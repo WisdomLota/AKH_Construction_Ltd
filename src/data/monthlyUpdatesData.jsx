@@ -13,6 +13,9 @@ import devConstruction11 from '../assets/devConstruction11.png';
 import devConstruction12 from '../assets/devConstruction12.png';
 import devConstruction13 from '../assets/devConstruction13.png';
 import devConstruction14 from '../assets/devConstruction14.png';
+import devConstruction15 from '../assets/devConstruction15.png';
+import devConstruction16 from '../assets/devConstruction16.png';
+import devConstruction17 from '../assets/devConstruction17.png';
 import may24Img1 from "../assets/may24_1st.png";
 import may24Img2 from "../assets/may24_2nd.png";
 import may24Img3 from "../assets/may24_3rd.png";
@@ -40,6 +43,19 @@ export const monthConfiguration = {
         subtitle: 'As at June 2025',
         updates: [
             {
+              id: 'update-25',
+              date: '25th June',
+              content: [
+                'Construction of gable walls are ongoing. Steel trusses are already on site, will be installed after the construction of the concrete facia. Roofing sheets has been paid for.',
+                'Block work to gate house are ongoing, preparations for plastering in top gear ⚙ with materials being delivered.'
+              ],
+              images: [devConstruction15, devConstruction16, devConstruction17],
+              layout: 'June1',
+              bgColor: 'bg-[#822e27]',
+              textColor: 'text-[#fbfbfb]',
+              iconColor: 'bg-[#fbfbfb]'
+            },
+            {
                 id: "update-21",
                 date: "21st June",
                 content: [
@@ -48,7 +64,7 @@ export const monthConfiguration = {
                     'Electrical piping has been completed, mechanical piping still ongoing almost completed. Gate house/fence and water treatment room at 50% level.'
                 ],
                 images: [devConstruction1, devConstruction2, devConstruction3, devConstruction4, devConstruction5],
-                layout: 'June1',
+                layout: 'June2',
                 bgColor: 'bg-white',
                 textColor: 'text-[#822e27]',
                 iconColor: 'bg-[#6ca2e3]'
@@ -62,7 +78,7 @@ export const monthConfiguration = {
                 'Gate house and water treatment house has commenced to slab level.'
               ],
               images: [devConstruction6, devConstruction7, devConstruction8, devConstruction9, devConstruction10],
-              layout: 'June2',
+              layout: 'June3',
               bgColor: 'bg-[#822e27]',
               textColor: 'text-[#fbfbfb]',
               iconColor: 'bg-[#fbfbfb]'
@@ -74,11 +90,11 @@ export const monthConfiguration = {
                 'Reinforcements to roof slab will be completed by weekend. Service pipes will be installed by next week and casting will be done before next weekend.'
               ],
               images: [devConstruction11, devConstruction12, devConstruction13, devConstruction14],
-              layout: 'June3',
+              layout: 'June4',
               bgColor: 'bg-white',
               textColor: 'text-[#822e27]',
               iconColor: 'bg-[#822e27]'
-            }
+            },
         ]
     },
     May: {
